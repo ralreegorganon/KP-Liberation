@@ -461,13 +461,13 @@ GRLIB_arsenal_items = [
     "ACRE_VHF30108SPIKE",                                           // VHF30108 GS
 
     // TFAR Items
-    "tf_anprc148jem",                                               // AN/PRC-148 JEM
-    "tf_anprc152",                                                  // AN/PRC-152
-    "tf_anprc154_1",                                                // AN/PRC-154
-    "tf_fadak",                                                     // FADAK
-    "tf_microdagr",                                                 // MicroDAGR Radio Programmer
-    "tf_pnr1000a_1",                                                // PNR-1000A
-    "tf_rf7800str"                                                  // PF-7800S-TR
+    "TFAR_anprc148jem",                                               // AN/PRC-148 JEM
+    "TFAR_anprc152",                                                  // AN/PRC-152
+    "TFAR_anprc154_1",                                                // AN/PRC-154
+    "TFAR_fadak",                                                     // FADAK
+    "TFAR_microdagr",                                                 // MicroDAGR Radio Programmer
+    "TFAR_pnr1000a_1",                                                // PNR-1000A
+    "TFAR_rf7800str"                                                  // PF-7800S-TR
 ];
 
 GRLIB_arsenal_backpacks = [
@@ -509,23 +509,23 @@ GRLIB_arsenal_backpacks = [
     "ACE_TacticalLadder_Pack",                                      // Telescopic Ladder
 
     // TFAR Backpacks
-    "tf_anarc164",                                                  // AN/ARC-164
-    "tf_anarc210",                                                  // AN/ARC-210
-    "tf_anprc155_coyote",                                           // AN/PRC 155 Coyote
-    "tf_anprc155",                                                  // AN/PRC 155
-    "tf_bussole",                                                   // Assault Pack Bussole
-    "tf_mr3000_bwmod_tropen",                                       // MR3000 BWMOD [Tropentarn]
-    "tf_mr3000_bwmod",                                              // MR3000 BWMOD [Flecktarn]
-    "tf_mr3000_multicam",                                           // MR3000 Multicam
-    "tf_mr3000",                                                    // MR3000
-    "tf_mr6000l",                                                   // MR6000L
-    "tf_rt1523g_big_bwmod_tropen",                                  // RT-1523G (ASIP) Big BWMOD [Tropentarn]
-    "tf_rt1523g_big_bwmod",                                         // RT-1523G (ASIP) Big BWMOD [Flecktarn]
-    "tf_rt1523g_big",                                               // RT-1523G (ASIP) Big
-    "tf_rt1523g_black",                                             // RT-1523G (ASIP) Black
-    "tf_rt1523g_bwmod",                                             // RT-1523G (ASIP) BWMOD
-    "tf_rt1523g_fabric",                                            // RT-1523G (ASIP) Fabric
-    "tf_rt1523g_green",                                             // RT-1523G (ASIP) Green
-    "tf_rt1523g_sage",                                              // RT-1523G (ASIP) Sage
-    "tf_rt1523g"                                                    // RT-1523G (ASIP)
+    "TFAR_anarc164",                                                  // AN/ARC-164
+    "TFAR_anarc210",                                                  // AN/ARC-210
+    "TFAR_anprc155_coyote",                                           // AN/PRC 155 Coyote
+    "TFAR_anprc155",                                                  // AN/PRC 155
+    "TFAR_bussole",                                                   // Assault Pack Bussole
+    "TFAR_mr3000_bwmod_tropen",                                       // MR3000 BWMOD [Tropentarn]
+    "TFAR_mr3000_bwmod",                                              // MR3000 BWMOD [Flecktarn]
+    "TFAR_mr3000_multicam",                                           // MR3000 Multicam
+    "TFAR_mr3000",                                                    // MR3000
+    "TFAR_mr6000l",                                                   // MR6000L
+    "TFAR_rt1523g_big_bwmod_tropen",                                  // RT-1523G (ASIP) Big BWMOD [Tropentarn]
+    "TFAR_rt1523g_big_bwmod",                                         // RT-1523G (ASIP) Big BWMOD [Flecktarn]
+    "TFAR_rt1523g_big",                                               // RT-1523G (ASIP) Big
+    "TFAR_rt1523g_black",                                             // RT-1523G (ASIP) Black
+    "TFAR_rt1523g_bwmod",                                             // RT-1523G (ASIP) BWMOD
+    "TFAR_rt1523g_fabric",                                            // RT-1523G (ASIP) Fabric
+    "TFAR_rt1523g_green",                                             // RT-1523G (ASIP) Green
+    "TFAR_rt1523g_sage",                                              // RT-1523G (ASIP) Sage
+    "TFAR_rt1523g"                                                    // RT-1523G (ASIP)
 ];

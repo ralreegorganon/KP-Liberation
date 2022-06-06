@@ -1817,7 +1817,7 @@ GRLIB_arsenal_items = [
     "ACRE_VHF30108SPIKE",                                           // VHF30108 GS
 
     // TFAR Items (Unsung has own radios which work with TFAR)
-    "tf_microdagr"                                                  // MicroDAGR Radio Programmer
+    "TFAR_microdagr"                                                  // MicroDAGR Radio Programmer
 ];
 
 GRLIB_arsenal_backpacks = [
