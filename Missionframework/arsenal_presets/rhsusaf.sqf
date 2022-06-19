@@ -353,7 +353,10 @@ GRLIB_arsenal_magazines = [
     "IEDUrbanSmall_Remote_Mag",                                     // Small IED (Urban)
     "SatchelCharge_Remote_Mag",                                     // Explosive Satchel
     "SLAMDirectionalMine_Wire_Mag",                                 // M6 SLAM Mine
-    "TrainingMine_Mag"                                              // Training Mine
+    "TrainingMine_Mag",                                             // Training Mine
+    "murshun_cigs_matches",
+    "murshun_cigs_lighter",
+    "murshun_cigs_cigpack"
 ];
 
 GRLIB_arsenal_items = [
