@@ -92,6 +92,16 @@ class CfgNotifications {
     class lib_intel_convoy: lib_intel {
         description = $STR_NOTIFICATION_CONVOY_SPOTTED_TEXT;
     };
+    class lib_intel_civ_supplies: lib_intel {
+        description = $STR_NOTIFICATION_CIV_SUPPLIES_TEXT;
+    };
+    class lib_secondary_civ_supplies_complete: lib_default_notification {
+        title = $STR_NOTIFICATION_SECONDARY_TITLE;
+        description = $STR_NOTIFICATION_CIV_SUPPLIES_COMPLETE_TEXT;
+        iconPicture = "res\notif\ui_notif_sob.paa";
+        color[] = { 0, 1, 0, 1 };
+        sound = "taskSucceeded";
+    };	
     class lib_secondary_fob_destroyed: lib_default_notification {
         title = $STR_NOTIFICATION_SECONDARY_TITLE;
         description = $STR_NOTIFICATION_SECONDARY_TEXT;
@@ -109,6 +119,11 @@ class CfgNotifications {
         color[] = { 1, 1, 0, 1 };
         sound = "taskCanceled";
     };
+    class lib_secondary_civ_supplies_no_room: lib_secondary_fob_destroyed {
+		description = $STR_NOTIFICATION_CIV_SUPPLIES_NO_ROOM;
+        color[] = { 1, 0, 0, 1 };
+        sound = "taskFailed";
+	};
     class lib_intel_sar: lib_intel {
         description = $STR_NOTIFICATION_SAR_STARTED;
     };
