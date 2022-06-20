@@ -94,8 +94,6 @@ GRLIB_arsenal_weapons = [
     "rhs_weap_m4a1_wd_mstock",                                      // M4A1 PIP (Woodland/Magpull Stock)
     "rhs_weap_m4a1_wd",                                             // M4A1 PIP (Woodland)
     "rhs_weap_m4a1",                                                // M4A1 PIP
-    "rhs_weap_M590_5RD",                                            // M590A1 (Short)
-    "rhs_weap_M590_8RD",                                            // M590A1 (Long)
     "rhs_weap_m72a7",                                               // M72A7
     "rhs_weap_maaws",                                               // M3 MAAWS
     "rhs_weap_mk17_CQC",                                            // Mk 17 Mod 0 (CQC)
@@ -110,9 +108,6 @@ GRLIB_arsenal_weapons = [
     "rhs_weap_mk18_m320",                                           // Mk 18 Mod 1 (M320)
     "rhs_weap_mk18_wd",                                             // Mk 18 Mod 1 (Woodland)
     "rhs_weap_mk18",                                                // Mk 18 Mod 1
-    "rhs_weap_SCARH_USA_CQC",                                       // SCAR-H (USA/CQC)
-    "rhs_weap_SCARH_USA_LB",                                        // SCAR-H (USA/LB)
-    "rhs_weap_SCARH_USA_STD",                                       // SCAR-H (USA/STD)
     "rhs_weap_smaw_green",                                          // MK153 Mod 0 SMAW (Green)
     "rhs_weap_smaw",                                                // MK153 Mod 0 SMAW (Black)
     "rhs_weap_sr25_d",                                              // Mk 11 Mod 0 (Desert)
@@ -225,12 +220,9 @@ GRLIB_arsenal_magazines = [
     "rhs_mag_m715_Green",                                           // M715 Green Smoke Round
     "rhs_mag_m716_yellow",                                          // M716 Yellow Smoke Round
     "rhs_mag_M781_Practice",                                        // M781 Practice Round
-    "rhs_mag_m7a3_cs",                                              // M7A3 CS Gas Grenade
     "rhs_mag_maaws_HE",                                             // FFV441 HE
     "rhs_mag_maaws_HEAT",                                           // FFV751 HEAT
     "rhs_mag_maaws_HEDP",                                           // FFV502 HEDP
-    "rhs_mag_mk3a2",                                                // MK3A2 Concussion Grenade
-    "rhs_mag_mk84",                                                 // M84 Stun Grenade
     "rhs_mag_six12_slug",                                           // Six-12 Slug
     "rhs_mag_smaw_HEAA",                                            // Mk.6 HEAA
     "rhs_mag_smaw_HEDP",                                            // Mk.3 HEDP
@@ -287,7 +279,6 @@ GRLIB_arsenal_magazines = [
     "rhsusf_50Rnd_762x51_m80a1epr",                                 // 50rnd M240 Softpack M80A1 EPR
     "rhsusf_50Rnd_762x51_m82_blank",                                // 50rnd M240 Belt M82 (Blank)
     "rhsusf_50Rnd_762x51",                                          // 50rnd M240 Softpack M80
-    "rhsusf_5Rnd_00Buck",                                           // 5Rnd .00 Buckshot
     "rhsusf_5Rnd_300winmag_xm2010",                                 // 5Rnd .300WM Mk248 MOD 1
     "rhsusf_5Rnd_762x51_AICS_m118_special_Mag",                     // 5Rnd AICS M118
     "rhsusf_5Rnd_762x51_AICS_m62_Mag",                              // 5Rnd AICS M62 (Tracer)
@@ -295,17 +286,9 @@ GRLIB_arsenal_magazines = [
     "rhsusf_5Rnd_762x51_m118_special_Mag",                          // 5Rnd M118
     "rhsusf_5Rnd_762x51_m62_Mag",                                   // 5Rnd M62 (Tracer)
     "rhsusf_5Rnd_762x51_m993_Mag",                                  // 5Rnd M993 AP
-    "rhsusf_5Rnd_FRAG",                                             // 5Rnd 12g FRAG
-    "rhsusf_5Rnd_HE",                                               // 5Rnd 12g HE-EP
-    "rhsusf_5Rnd_Slug",                                             // 5Rnd 12g Slug
-    "rhsusf_8Rnd_00Buck",                                           // 8Rnd .00 Buckshot
-    "rhsusf_8Rnd_FRAG",                                             // 8Rnd 12g FRAG
-    "rhsusf_8Rnd_HE",                                               // 8Rnd 12g HE-EP
-    "rhsusf_8Rnd_Slug",                                             // 8Rnd 12g Slug
     "rhsusf_m112_mag",                                              // M112
     "rhsusf_m112x4_mag",                                            // M112 (x4)
     "rhsusf_mag_10Rnd_STD_50BMG_M33",                               // 10rnd M107 M33
-    "rhsusf_mag_10Rnd_STD_50BMG_mk211",                             // 10rnd M107 Mk211
     "rhsusf_mag_15Rnd_9x19_FMJ",                                    // 15rnd M9 M882 FMJ
     "rhsusf_mag_15Rnd_9x19_JHP",                                    // 15rnd M9 Mk243 JHP
     "rhsusf_mag_17Rnd_9x19_FMJ",                                    // 17rnd Glock M882 FMJ
@@ -701,7 +684,6 @@ GRLIB_arsenal_items = [
     "rhsusf_acc_ACOG2",                                             // M150 RCO (ARD)
     "rhsusf_acc_ACOG3_USMC",                                        // AN/PVQ-31A (ARD/Lens Cover)
     "rhsusf_acc_ACOG3",                                             // M150 RCO (ARD/Lens Cover)
-    "rhsusf_acc_anpas13gv1",                                        // AN/PAS-13G(V)1
     "rhsusf_acc_anpeq15_bk_light",                                  // AN/PEQ-15/M952V Black (Light)
     "rhsusf_acc_anpeq15_bk_top",                                    // AN/PEQ-15 Black (Top)
     "rhsusf_acc_anpeq15_bk",                                        // AN/PEQ-15/M952V Black (Laser)

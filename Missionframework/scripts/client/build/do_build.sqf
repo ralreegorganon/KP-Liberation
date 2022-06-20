@@ -16,7 +16,6 @@ for "_i" from 1 to 36 do {
 
 { _x setObjectTexture [0, "#(rgb,8,8,3)color(0,1,0,1)"]; } foreach _object_spheres;
 
-if (isNil "manned") then { manned = false };
 if (isNil "gridmode" ) then { gridmode = 0 };
 if (isNil "repeatbuild" ) then { repeatbuild = false };
 if (isNil "build_rotation" ) then { build_rotation = 0 };
@@ -47,9 +46,6 @@ while { true } do {
     if(buildtype == 1) then {
         _pos = [(getpos player select 0) + 1,(getpos player select 1) + 1, 0];
         _grp = group player;
-        if ( manned ) then {
-            _grp = createGroup GRLIB_side_friendly;
-        };
         _classname createUnit [_pos, _grp,"this addMPEventHandler [""MPKilled"", {_this spawn kill_manager}]", 0.5, "private"];
         build_confirmed = 0;
     } else {
@@ -264,7 +260,7 @@ while { true } do {
                     _vehicle setVectorUp surfaceNormal position _vehicle;
                 };
 
-                if ( (unitIsUAV _vehicle) || manned ) then {
+                if ( (unitIsUAV _vehicle) ) then {
                     [ _vehicle ] call KPLIB_fnc_forceBluforCrew;
                 };
 
@@ -310,5 +306,4 @@ while { true } do {
     } else {
         dobuild = 0;
     };
-    manned = false;
 };
