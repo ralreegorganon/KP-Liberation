@@ -126,7 +126,11 @@ GRLIB_arsenal_weapons = [
     "rhsusf_weap_MP7A2_aor1",                                       // MP7A2 (AOR1)
     "rhsusf_weap_MP7A2_desert",                                     // MP7A2 (Desert)
     "rhsusf_weap_MP7A2_winter",                                     // MP7A2 (Winter)
-    "rhsusf_weap_MP7A2"                                             // MP7A2
+    "rhsusf_weap_MP7A2",                                            // MP7A2
+
+    "arifle_SPAR_03_blk_F",                                         // SPAR-17 7.62 mm (Black)
+    "arifle_SPAR_03_khk_F",                                         // SPAR-17 7.62 mm (Khaki)
+    "arifle_SPAR_03_snd_F"                                          // SPAR-17 7.62 mm (Sand)
 ];
 
 GRLIB_arsenal_magazines = [
@@ -314,6 +318,7 @@ GRLIB_arsenal_magazines = [
     "rhsusf_mine_m49a1_10m_mag",                                    // M49A1 (10m)
     "rhsusf_mine_m49a1_3m_mag",                                     // M49A1 (3m)
     "rhsusf_mine_m49a1_6m_mag",                                     // M49A1 (6m)
+    "20Rnd_762x51_Mag",                                             // 7.62 mm 20Rnd Mag
 
     // Vanilla Standard Grenades & Explosives
     "APERSBoundingMine_Range_Mag",                                  // APERS Bounding Mine
@@ -847,7 +852,6 @@ GRLIB_arsenal_items = [
     "ACE_Chemlight_Shield",                                         // Chemlight Shield (Empty)
     "ACE_Clacker",                                                  // M57 Firing Device
     "ACE_DAGR",                                                     // DAGR
-    "ACE_DeadManSwitch",                                            // Dead Man's Switch
     "ACE_DefusalKit",                                               // Defusal Kit
     "ace_dragon_sight",                                             // SU-36/P Daysight
     "ACE_EarPlugs",                                                 // Earplugs
@@ -862,6 +866,7 @@ GRLIB_arsenal_items = [
     "ACE_HuntIR_monitor",                                           // HuntIR monitor
     "ACE_IR_Strobe_Item",                                           // IR Strobe
     "ACE_Kestrel4500",                                              // Kestrel 4500NV
+    "ACE_key_west",                                                 // Vehicle key - West
     "ACE_M26_Clacker",                                              // M152 Firing Device
     "ACE_MapTools",                                                 // Map Tools
     "ACE_microDAGR",                                                // MicroDAGR GPS
@@ -910,6 +915,7 @@ GRLIB_arsenal_items = [
     "ACE_VMM3",                                                     // VMM3
     "ACE_wirecutter",                                               // Wirecutter
     "ACE_Yardage450",                                               // Yardage 450
+    "ACE_SpareBarrel",                                              // Spare Barrel
 
     // ACRE Items
     "ACRE_PRC117F",                                                 // AN/PRC-117F
