@@ -30,9 +30,10 @@ private _veh = objNull;
     _x params ["_id", "_classname"];
 
     for [{_i = 0}, {!isNil ([_id, _i] joinString "")}, {_i = _i + 1}] do {
+        _objectClassname = if (_classname isEqualType []) then {_classname select (_i % 2);} else {_classname;};
         _placeholder = missionNamespace getVariable ([_id, _i] joinString "");
         _spawnPos = getPosATL _placeholder;
-        _veh = _classname createVehicle [_spawnPos select 0, _spawnPos select 1, (_spawnPos select 2) + 0.2];
+        _veh = _objectClassname createVehicle [_spawnPos select 0, _spawnPos select 1, (_spawnPos select 2) + 0.2];
         _veh enableSimulationGlobal false;
         _veh allowDamage false;
         _veh setDir (getDir _placeholder);

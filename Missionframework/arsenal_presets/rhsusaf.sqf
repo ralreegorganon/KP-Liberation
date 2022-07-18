@@ -217,6 +217,11 @@ GRLIB_arsenal_magazines = [
     "rhs_mag_M585_white",                                           // M585 White Flare Round
     "rhs_mag_m661_green",                                           // M661 Green Flare Round
     "rhs_mag_m662_red",                                             // M662 Red Flare Round
+    "UGL_FlareWhite_F",                                             // Flare Round White
+    "UGL_FlareGreen_F",                                             // Flare Round Green
+    "UGL_FlareRed_F",                                               // Flare Round Red
+    "UGL_FlareYellow_F",                                            // Flare Round Yellow
+    "UGL_FlareCIR_F",                                               // Flare Round IR
     "rhs_mag_m67",                                                  // M67 Fragmentation Grenade
     "rhs_mag_m69",                                                  // M69 Practice Grenade
     "rhs_mag_m713_Red",                                             // M713 Red Smoke Round
@@ -224,6 +229,7 @@ GRLIB_arsenal_magazines = [
     "rhs_mag_m715_Green",                                           // M715 Green Smoke Round
     "rhs_mag_m716_yellow",                                          // M716 Yellow Smoke Round
     "rhs_mag_M781_Practice",                                        // M781 Practice Round
+    "ACE_HuntIR_M203",                                              // HuntIR Round
     "rhs_mag_maaws_HE",                                             // FFV441 HE
     "rhs_mag_maaws_HEAT",                                           // FFV751 HEAT
     "rhs_mag_maaws_HEDP",                                           // FFV502 HEDP
@@ -824,6 +830,7 @@ GRLIB_arsenal_items = [
     "ItemMap",                                                      // Map
     "ItemRadio",                                                    // Radio
     "ItemWatch",                                                    // Watch
+    "Laserdesignator",                                              // Laser Designator
     "Medikit",                                                      // Medikit
     "MineDetector",                                                 // Mine Detector
     "ToolKit",                                                      // Toolkit
@@ -837,6 +844,9 @@ GRLIB_arsenal_items = [
     "V_RebreatherB",                                                // Rebreather [NATO]
 
     // ACE Items
+    "acc_pointer_IR",                                               // Laser Pointer (red IR)
+    "ACE_acc_pointer_red",                                          // Laser Pointer (red)
+    "ACE_acc_pointer_green_IR",                                     // Laser Pointer (green IR)
     "ACE_acc_pointer_green",                                        // Laser Pointer (green)
     "ACE_adenosine",                                                // Adenosine autoinjector
     "ACE_Altimeter",                                                // Altimeter Watch
@@ -985,4 +995,8 @@ GRLIB_arsenal_backpacks = [
     "TFAR_rt1523g_rhs",                                               // RT-1523G (ASIP) RHS
     "TFAR_rt1523g_sage",                                              // RT-1523G (ASIP) Sage
     "TFAR_rt1523g"                                                    // RT-1523G (ASIP)
+];
+
+ACE_arsenal_defaults = [
+    ["Infantry", [[],[],[],["rhs_uniform_g3_mc",[["ACE_CableTie",4],["ACE_EarPlugs",1],["ACE_Flashlight_XL50",1],["ACE_IR_Strobe_Item",3],["ACRE_PRC343",1]]],["rhsusf_spcs_ocp_rifleman_alt",[["rhs_mag_an_m8hc",2,1],["rhs_mag_m67",3,1]]],["rhsusf_assault_eagleaiii_ocp",[["ACE_fieldDressing",20],["ACE_bloodIV_250",1],["ACE_EntrenchingTool",1],["ACE_epinephrine",3],["ACE_morphine",15],["ACE_tourniquet",4],["ACE_adenosine",2]]],"rhsusf_opscore_mc_cover_pelt_cam","",["rhsusf_bino_lerca_1200_tan","","","",[],[],""],["ItemMap","ItemGPS","ItemRadioAcreFlagged","ItemCompass","ACE_Altimeter","ACE_NVG_Wide"]]]
 ];
