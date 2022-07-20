@@ -35,7 +35,7 @@ if (save_is_loaded && {(KP_liberation_clearances findIf {(_x select 0) isEqualTo
     _x switchLight "OFF";
     _x hideObjectGlobal true;
     _x allowDamage false;
-} forEach (nearestTerrainObjects [_centerPos, [], _radius, false, true]);
+} forEach (nearestTerrainObjects [_centerPos, ["TREE", "SMALL TREE", "BUSH", "ROCK", "ROCKS"], _radius, false, true]);
 
 if (_save) then {
     KP_liberation_clearances pushBackUnique [_centerPos, _radius];

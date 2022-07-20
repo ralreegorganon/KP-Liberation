@@ -3615,6 +3615,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						name="uavoperator";
 						description="UAV and Intelligence";
 						isPlayable=1;
 					};

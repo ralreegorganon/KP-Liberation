@@ -821,7 +821,6 @@ GRLIB_arsenal_items = [
 
     // Vanilla Standard Items
     "acc_flashlight_pistol",                                        // Pistol Flashlight
-    "B_UavTerminal",                                                // UAV Terminal [NATO]
     "DroneDetector",                                                // Drone Detector
     "FirstAidKit",                                                  // First Aid Kit
     "G_B_Diving",                                                   // Diving Goggles [NATO]
@@ -1000,3 +999,8 @@ GRLIB_arsenal_backpacks = [
 ACE_arsenal_defaults = [
     ["Infantry", [[],[],[],["rhs_uniform_g3_mc",[["ACE_CableTie",4],["ACE_EarPlugs",1],["ACE_Flashlight_XL50",1],["ACE_IR_Strobe_Item",3],["ACRE_PRC343",1]]],["rhsusf_spcs_ocp_rifleman_alt",[["rhs_mag_an_m8hc",2,1],["rhs_mag_m67",3,1]]],["rhsusf_assault_eagleaiii_ocp",[["ACE_fieldDressing",20],["ACE_bloodIV_250",1],["ACE_EntrenchingTool",1],["ACE_epinephrine",3],["ACE_morphine",15],["ACE_tourniquet",4],["ACE_adenosine",2]]],"rhsusf_opscore_mc_cover_pelt_cam","",["rhsusf_bino_lerca_1200_tan","","","",[],[],""],["ItemMap","ItemGPS","ItemRadioAcreFlagged","ItemCompass","ACE_Altimeter","ACE_NVG_Wide"]]]
 ];
+
+_uavOperator = missionNamespace getVariable["uavoperator", objNull];
+if (player isEqualTo _uavOperator) then {
+    GRLIB_arsenal_items pushBack "B_UavTerminal";
+};
