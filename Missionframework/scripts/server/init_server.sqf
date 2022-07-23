@@ -1,3 +1,6 @@
+// Global Vars
+KPLIB_use_liberation_civilians = !(isClass (configfile >> "CfgPatches" >> "grad_civs_main"));
+
 // AI
 add_civ_waypoints = compileFinal preprocessFileLineNumbers "scripts\server\ai\add_civ_waypoints.sqf";
 add_defense_waypoints = compileFinal preprocessFileLineNumbers "scripts\server\ai\add_defense_waypoints.sqf";
@@ -55,7 +58,12 @@ execVM "scripts\server\game\synchronise_vars.sqf";
 execVM "scripts\server\game\synchronise_eco.sqf";
 execVM "scripts\server\game\zeus_synchro.sqf";
 execVM "scripts\server\offloading\show_fps.sqf";
-execVM "scripts\server\patrols\civilian_patrols.sqf";
+if (KPLIB_use_liberation_civilians) then {
+	manage_one_civilian_patrol = compileFinal preprocessFileLineNumbers "scripts\server\patrols\manage_one_civilian_patrol.sqf";
+	execVM "scripts\server\patrols\civilian_patrols.sqf";
+} else {
+    execVM "scripts\server\patrols\init_grad_civs.sqf";
+};
 execVM "scripts\server\patrols\manage_patrols.sqf";
 execVM "scripts\server\patrols\reinforcements_resetter.sqf";
 if (KP_liberation_ailogistics) then {execVM "scripts\server\resources\manage_logistics.sqf";};

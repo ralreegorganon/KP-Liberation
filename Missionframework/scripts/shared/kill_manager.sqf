@@ -169,6 +169,7 @@ if (isServer) then {
 
 // Body/Wreck deletion after cleanup delay
 if (isServer && !isplayer _unit) then {
+    if((side (group _unit) == GRLIB_side_civilian) && !KPLIB_use_liberation_civilians) exitWith {};
     sleep GRLIB_cleanup_delay;
     hidebody _unit;
     sleep 10;
