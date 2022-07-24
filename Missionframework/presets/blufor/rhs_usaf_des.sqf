@@ -94,7 +94,7 @@ light_vehicles = [
     ["rhsusf_m1165a1_gmv_mk19_m240_socom_d",140,50,60],			        // M1165A1 GMV (Mk19/M240)
     ["rhsusf_m1165a1_gmv_m2_m240_socom_d",140,50,60],			        // M1165A1 GMV (M2/M240)
     ["rhsusf_m1165a1_gmv_m134d_m240_socom_d",200,100,75],		        // M1165A1 GMV (M134/M240)
-    ["rhsusaf_m1245_m2crows_socom_d",175,100,75],				        // M1245 M2 Crows
+    ["rhsusf_m1245_m2crows_socom_d",175,100,75],				        // M1245 M2 Crows
     ["rhsusf_M1238A1_socom_d",130,0,60],                                // M1238
     ["rhsusf_M1238A1_M2_socom_d",130,40,60],                            // M1238 (M2)
     ["rhsusf_M1238A1_Mk19_socom_d",130,60,60],                          // M1238 (Mk19)
