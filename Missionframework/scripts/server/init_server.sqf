@@ -1,5 +1,6 @@
 // Global Vars
 KPLIB_use_liberation_civilians = !(isClass (configfile >> "CfgPatches" >> "grad_civs_main"));
+publicVariable "KPLIB_use_liberation_civilians";
 
 // AI
 add_civ_waypoints = compileFinal preprocessFileLineNumbers "scripts\server\ai\add_civ_waypoints.sqf";
