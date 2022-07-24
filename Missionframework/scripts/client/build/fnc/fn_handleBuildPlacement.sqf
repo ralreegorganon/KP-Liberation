@@ -20,5 +20,11 @@ if (buildtype isEqualTo 6 && {
 	repeatbuild = true;
 };
 
+if(!_shouldRepeat) then {
+    build_rotation = 0;
+    build_elevation = 0;
+    build_distance = 0;
+};
+
 build_confirmed = 2;
 hint localize "STR_CONFIRM_HINT";

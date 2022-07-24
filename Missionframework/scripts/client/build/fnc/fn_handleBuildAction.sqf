@@ -54,7 +54,7 @@ switch (_key) do {
         [] call KPLIB_fnc_handleBuildCancel;
     };
 	case KEY_PLACE: {
-        [] call KPLIB_fnc_handleBuildPlacement;
+        [_shift] call KPLIB_fnc_handleBuildPlacement;
     };
 };
 
