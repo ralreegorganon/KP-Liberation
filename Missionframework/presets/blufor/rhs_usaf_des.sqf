@@ -20,7 +20,7 @@ FOB_typename = "Land_Cargo_HQ_V3_F";                                            
 FOB_box_typename = "B_Slingload_01_Cargo_F";                                    // This is the FOB as a container.
 FOB_truck_typename = "rhsusf_M1078A1P2_B_D_CP_fmtv_usarmy";                     // This is the FOB as a vehicle.
 Arsenal_typename = "B_supplyCrate_F";                                           // This is the virtual arsenal as portable supply crates.
-Respawn_truck_typename = "rhsusf_M1085A1P2_B_D_Medical_fmtv_usarmy";            // This is the mobile respawn (and medical) truck.
+Respawn_truck_typename = "rhsusf_M1230a1_usarmy_d";                             // This is the mobile respawn (and medical) truck.
 huron_typename = "RHS_CH_47F";                                                  // This is Spartan 01, a multipurpose mobile respawn as a helicopter.
 crewman_classname = "rhsusf_army_ocp_combatcrewman";                            // This defines the crew for vehicles.
 pilot_classname = "rhsusf_army_ocp_helipilot";                                  // This defines the pilot for helicopters.
@@ -30,7 +30,7 @@ KP_liberation_truck_classname = "rhsusf_M977A4_BKIT_usarmy_d";                  
 KP_liberation_small_storage_building = "ContainmentArea_02_sand_F";             // A small storage area for resources.
 KP_liberation_large_storage_building = "ContainmentArea_01_sand_F";             // A large storage area for resources.
 KP_liberation_recycle_building = "Land_RepairDepot_01_tan_F";                   // The building defined to unlock FOB recycling functionality.
-KP_liberation_air_vehicle_building = "Land_Radar_Small_F";                     // The building defined to unlock FOB air vehicle functionality.
+KP_liberation_air_vehicle_building = "Land_Radar_Small_F";                      // The building defined to unlock FOB air vehicle functionality.
 KP_liberation_heli_slot_building = "Land_HelipadSquare_F";                      // The helipad used to increase the GLOBAL rotary-wing cap.
 KP_liberation_plane_slot_building = "Land_TentHangar_V1_F";                     // The hangar used to increase the GLOBAL fixed-wing cap.
 KP_liberation_supply_crate = "CargoNet_01_box_F";                               // This defines the supply crates, as in resources.
@@ -87,13 +87,20 @@ light_vehicles = [
     ["rhsusf_M1220_MK19_usarmy_d",120,60,60],                           // M1220 (Mk19)
     ["rhsusf_M1220_M153_M2_usarmy_d",140,40,60],                        // M1220 (M2 CROWS)
     ["rhsusf_M1220_M153_MK19_usarmy_d",140,60,60],                      // M1220 (Mk19 CROWS)
+    ["rhsusf_M1230_M2_usarmy_d",120,40,60], 					        // M1230 (O-GPK/M2) 
+    ["rhsusf_M1237_M2_usarmy_d",140,50,60], 					        // M1237 (O-GPK/M2)
+    ["rhsusf_m1240a1_m2_usarmy_d",120,50,60],					        // M1240 (O-GPK/M2)
+    ["rhsusf_m1240a1_m240_uik_usarmy_d",120,50,60],				        // M1240A1 (O-GPK/M240)
+    ["rhsusf_m1165a1_gmv_mk19_m240_socom_d",140,50,60],			        // M1165A1 GMV (Mk19/M240)
+    ["rhsusf_m1165a1_gmv_m2_m240_socom_d",140,50,60],			        // M1165A1 GMV (M2/M240)
+    ["rhsusf_m1165a1_gmv_m134d_m240_socom_d",200,100,75],		        // M1165A1 GMV (M134/M240)
+    ["rhsusaf_m1245_m2crows_socom_d",175,100,75],				        // M1245 M2 Crows
     ["rhsusf_M1238A1_socom_d",130,0,60],                                // M1238
     ["rhsusf_M1238A1_M2_socom_d",130,40,60],                            // M1238 (M2)
     ["rhsusf_M1238A1_Mk19_socom_d",130,60,60],                          // M1238 (Mk19)
     ["rhsusf_M1232_usarmy_d",140,0,60],                                 // M1232
     ["rhsusf_M1232_M2_usarmy_d",140,40,60],                             // M1232 (M2)
     ["rhsusf_M1232_MK19_usarmy_d",140,60,60],                           // M1232 (Mk19)
-    ["rhsusf_M1230a1_usarmy_d",120,0,60],                               // M1230A1 (MEDEVAC)
     ["rhsusf_M1083A1P2_D_open_fmtv_usarmy",125,0,75],                   // M1083A1P2 Transport
     ["rhsusf_M1083A1P2_D_fmtv_usarmy",125,0,75],                        // M1083A1P2 Transport (Covered)
     ["rhsusf_M1083A1P2_D_flatbed_fmtv_usarmy",100,0,50],                // M1083A1P2

@@ -127,7 +127,11 @@ GRLIB_arsenal_weapons = [
     "rhsusf_weap_MP7A2_desert",                                     // MP7A2 (Desert)
     "rhsusf_weap_MP7A2_winter",                                     // MP7A2 (Winter)
     "rhsusf_weap_MP7A2",                                            // MP7A2
-
+    "rhsusf_weap_MP7A2_folded",                                     // MP7 Folded
+    "rhs_weap_m14_socom_rail",                                      // M14 SOCOM Rail
+    "rhs_weap_m14_socom",                                           // M14 SOCOM
+    "rhs_weap_m14_ris_fiberglass",                                  // M14 RIS Fiberglass
+    "rhs_weap_m14_rail_fiberglass",                                 // M14 Rail Fiberglass
     "arifle_SPAR_03_blk_F",                                         // SPAR-17 7.62 mm (Black)
     "arifle_SPAR_03_khk_F",                                         // SPAR-17 7.62 mm (Khaki)
     "arifle_SPAR_03_snd_F"                                          // SPAR-17 7.62 mm (Sand)
@@ -203,6 +207,10 @@ GRLIB_arsenal_magazines = [
     "rhs_mag_30Rnd_556x45_Mk318_Stanag_Pull",                       // 30rnd STANAG (Puller) Mk318 Mod 0
     "rhs_mag_30Rnd_556x45_Mk318_Stanag_Ranger",                     // 30rnd STANAG (Ranger) Mk318 Mod 0
     "rhs_mag_30Rnd_556x45_Mk318_Stanag",                            // 30rnd STANAG Mk318 Mod 0
+    "ACE_30Rnd_556x45_Stanag_Tracer_Dim",                           // 30rnd STANAG 556 Tracer Dim
+    "ACE_20Rnd_762x51_Mag_Tracer_Dim",                              // 20rnd 762 Tracer Dim
+    "ACE_20Rnd_762x51_Mk319_Mod_0_Mag",                             // 20rnd 762 Mk319
+    "rhsusf_20Rnd_762x51_m80_Mag",                                  // 20rnd 726 M80
     "rhs_mag_an_m14_th3",                                           // AN-M14 TH3 Invendenary Grenade
     "rhs_mag_an_m8hc",                                              // AN-M8HC White Smooke
     "rhs_mag_m18_green",                                            // M18 Green Smoke Grenade
@@ -741,6 +749,7 @@ GRLIB_arsenal_items = [
     "rhsusf_acc_LEUPOLDMK4_d",                                      // Mk. 4 M3 (Desert)
     "rhsusf_acc_LEUPOLDMK4_wd",                                     // Mk. 4 M3 (Woodland)
     "rhsusf_acc_LEUPOLDMK4",                                        // Mk. 4 ER/T 3.5-10x M3
+    "rhsusaf_acc_m14_flashsupressor",                               // M14 Flash Suppressor
     "rhsusf_acc_M2010S_d",                                          // TiTan (Desert)
     "rhsusf_acc_M2010S_sa",                                         // TiTan (Semi-Arid)
     "rhsusf_acc_M2010S_wd",                                         // TiTan (Woodland)
@@ -764,6 +773,8 @@ GRLIB_arsenal_items = [
     "rhsusf_acc_mrds",                                              // MRDS
     "rhsusf_acc_nt4_black",                                         // NT4 QDSS (Black)
     "rhsusf_acc_nt4_tan",                                           // NT4 QDSS (Tan)
+    "rhsusf_acc_nxs_5522x56_md_sun",                                // Long Range Scope (w/ Sun shade)
+    "rhsusf_acc_nxs_5522x56_md",                                    // Long Range Scope (w/o Sun shade)
     "rhsusf_acc_omega9k",                                           // SILENCERCO OMEGA 9K
     "rhsusf_acc_premier_anpvs27",                                   // M8541A + AN/PVS-27
     "rhsusf_acc_premier_low",                                       // M8541A (low mount)
