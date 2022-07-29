@@ -1,11 +1,12 @@
 class Build {
-	file = "scripts\client\build\fnc";
+    file = "scripts\client\build\fnc";
 
-	class getBoundingDistance       {};
+    // Functions
+    class getBoundingDistance       {};
     class handleBuildAction         {};
-	class handleBuildCancel			{};
-	class handleBuildDistance		{};
-	class handleBuildElevation		{};
-	class handleBuildPlacement		{};
-	class handleBuildRotation		{};
+    class handleBuildCancel         {};
+    class handleBuildDistance       {};
+    class handleBuildElevation      {};
+    class handleBuildPlacement      {};
+    class handleBuildRotation       {};
 };

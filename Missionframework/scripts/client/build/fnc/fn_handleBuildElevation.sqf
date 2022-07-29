@@ -9,11 +9,11 @@
         Raises or lowers the build object.
 
     Parameters:
-        _raiseElevation		  - Should the object be raised. Default is false to lower.
-        _fastMode			      - Speed up elevation manipulation by a factor of 5.
+        _raiseElevation         - Should the object be raised. Default is false to lower.
+        _fastMode               - Speed up elevation manipulation by a factor of 5.
 
     Returns:
-		    void
+        void
 */
 #ifndef MAX_DISTANCE
 #include "..\ui\liberation_build_info.hpp"

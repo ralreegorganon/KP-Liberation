@@ -1,4 +1,6 @@
 {
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
     "sqf.enableCBA": true,
     "sqf.enableACE3": true,
     "editor.insertSpaces": true,

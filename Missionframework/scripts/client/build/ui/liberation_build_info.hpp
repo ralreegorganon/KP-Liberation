@@ -1,4 +1,5 @@
 #include "\a3\ui_f\hpp\definedikcodes.inc"
+#include "build_types.hpp"
 #define KEY_ROTATE_LEFT DIK_Q
 #define KEY_ROTATE_RIGHT DIK_E
 #define KEY_LOWER DIK_F
