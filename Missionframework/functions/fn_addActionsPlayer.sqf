@@ -122,7 +122,7 @@ _player addAction [
 // Build
 _player addAction [
     ["<t color='#FFFF00'>", localize "STR_BUILD_ACTION", "</t><img size='2' image='res\ui_build.paa'/>"] joinString "",
-    "scripts\client\build\fnc\fn_openBuildMenu.sqf",
+    {[] call KPLIB_fnc_openBuildMenu},
     nil,
     -750,
     false,

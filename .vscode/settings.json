@@ -1,6 +1,7 @@
 {
     "editor.tabSize": 4,
     "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
     "sqf.enableCBA": true,
     "sqf.enableACE3": true,
     "editor.insertSpaces": true,
@@ -8,7 +9,7 @@
     "editor.detectIndentation": true,
     "files.associations": {
         "*.hpp": "ext",
-        "*.h":   "ext",
+        "*.h": "ext",
         "*.inc": "ext",
         "*.cpp": "ext",
         "*.ext": "ext",
@@ -42,7 +43,10 @@
     ],
     "psi-header.changes-tracking": {
         "isActive": true,
-        "include": ["sqf", "ext"],
+        "include": [
+            "sqf",
+            "ext"
+        ],
         "modDate": "Last Update:",
         "modDateFormat": "YYYY-MM-DD",
         "autoHeader": "manualSave"
