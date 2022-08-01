@@ -2,6 +2,7 @@ class Build {
     file = "scripts\client\build\fnc";
 
     // Functions
+    class beginBuild                {};
     class buildAi                   {};
     class buildItem                 {};
     class buildSquad                {};
@@ -12,4 +13,8 @@ class Build {
     class handleBuildElevation      {};
     class handleBuildPlacement      {};
     class handleBuildRotation       {};
+
+    class build_postInit {
+        postInit = 1;
+    }
 };

@@ -2,7 +2,7 @@
     File: fn_handleBuildElevation.sqf
     Author: ColinM https://github.com/ColinM9991/KP-Liberation
     Date: 2022-07-22
-    Last Update: 2022-07-22
+    Last Update: 2022-08-01
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -26,6 +26,6 @@ params[
 if (_raiseElevation && {build_elevation >= MAX_DISTANCE}) exitWith{};
 
 private _moveBy = [0.05, 0.25] select _fastMode;
-private _elevation = [(0 - _moveBy), _moveBy] select _raiseElevation;
+private _elevation = if(_raiseElevation) then [{_moveBy},(0 - _moveBy)];
 
 build_elevation = build_elevation + _elevation;

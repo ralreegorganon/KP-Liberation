@@ -2,7 +2,7 @@
     File: fn_handleBuildAction.sqf
     Author: ColinM https://github.com/ColinM9991/KP-Liberation
     Date: 2022-07-20
-    Last Update: 2022-07-20
+    Last Update: 2022-08-02
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -28,16 +28,15 @@ params [
 	["_ctrl", false, [false]]
 ];
 
-if (build_confirmed != 1 || {
-	!_ctrl
-}) exitWith {};
+if (!_ctrl) exitWith {};
 
-private _object = player getVariable ["KP_liberation_build_ghost", objNull];
+private _vehicle = KPLIB_buildPreview;
+private _buildType = KPLIB_buildType;
 
 switch (_key) do {
 	case KEY_ROTATE_LEFT;
 	case KEY_ROTATE_RIGHT: {
-        [_key isEqualTo KEY_ROTATE_RIGHT, _shift, _object] call KPLIB_fnc_handleBuildRotation;
+        [_key isEqualTo KEY_ROTATE_RIGHT, _shift, _vehicle] call KPLIB_fnc_handleBuildRotation;
     };
 
 	case KEY_LOWER;
@@ -47,14 +46,18 @@ switch (_key) do {
 
 	case KEY_CLOSER;
 	case KEY_FURTHER: {
-		[_key isEqualTo KEY_FURTHER, _shift, _object] call KPLIB_fnc_handleBuildDistance;
+		[_key isEqualTo KEY_FURTHER, _shift, _vehicle] call KPLIB_fnc_handleBuildDistance;
 	};
 
+    case KEY_VECTOR: {
+        build_vector = !build_vector;
+    };
+
 	case KEY_CANCEL: {
-        [] call KPLIB_fnc_handleBuildCancel;
+        [_buildType] call KPLIB_fnc_handleBuildCancel;
     };
 	case KEY_PLACE: {
-        [_shift] call KPLIB_fnc_handleBuildPlacement;
+        [_shift, _buildType] call KPLIB_fnc_handleBuildPlacement;
     };
 };
 

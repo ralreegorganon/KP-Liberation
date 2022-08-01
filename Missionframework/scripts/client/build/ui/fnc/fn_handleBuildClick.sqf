@@ -46,6 +46,6 @@ private _buildType = [_parsedData] call KPLIB_fnc_getBuildType;
     _fuelCost,
     _buildType,
     _buildManned
-] call KPLIB_fnc_buildItem;
+] spawn KPLIB_fnc_beginBuild;
 
 closeDialog 0;

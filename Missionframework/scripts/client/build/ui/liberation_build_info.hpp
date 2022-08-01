@@ -8,5 +8,6 @@
 #define KEY_FURTHER DIK_W
 #define KEY_CANCEL DIK_C
 #define KEY_PLACE DIK_SPACE
+#define KEY_VECTOR DIK_V
 #define MIN_DISTANCE 3
 #define MAX_DISTANCE 25

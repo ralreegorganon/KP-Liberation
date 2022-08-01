@@ -6,53 +6,60 @@
     License: MIT License - http://www.opensource.org/licenses/MIT
     
     Description:
-        Builds the item.
+        No description added yet.
     
     Parameter(s):
-        _className      - Classname for the item to build           [STRING or Array, defaults to ""]
-        _supplyCost     - How many supplies this item costs         [NUMBER, defaults to 0]
-        _ammoCost       - How much ammo this item costs             [NUMBER, defaults to 0]
-        _fuelCost       - How much fuel this item costs             [NUMBER, defaults to 0]
-        _buildType      - The build type, determined by the item    [NUMBER, defaults to -1]
-        _buildManned    - Should it be built with units             [BOOLEAN, defaults to false]
+        _localVariable - Description [DATATYPE, defaults to DEFAULTVALUE]
     
     Returns:
         NONE
 */
+
 #ifndef BUILD_TYPE_BUILDING
 #include "..\ui\build_types.hpp"
 #endif
 
 params[
-    ["_className", "", [[], ""]],
-    ["_supplyCost", 0, [0]],
-    ["_ammoCost", 0, [0]],
-    ["_fuelCost", 0, [0]],
-    ["_buildType", -1, [-1]],
-    ["_buildManned", false, [false]]
+	["_className", "", [""]],
+	["_previewVehicle", objNull, [objNull]],
+	["_buildType", -1, [-1]],
+	["_buildManned", false, [false]]
 ];
 
-private _nearfob = [] call KPLIB_fnc_getNearestFob;
-private _storage_areas = (_nearfob nearobjects (GRLIB_fob_range * 2)) select {(_x getVariable ["KP_liberation_storage_type",-1]) == 0};
+private _position = getPos _previewVehicle;
+private _direction = getDir _previewVehicle;
+deleteVehicle _previewVehicle;
 
-private _processPurchase = {
-    [_supplyCost, _ammoCost, _fuelCost, _className, _buildType, _storage_areas] remoteExec ["build_remote_call",2];
+_vehicle = _classname createVehicle _position;
+_vehicle allowDamage false;
+_vehicle setdir _direction;
+if ((toLower (typeOf _vehicle)) in KPLIB_b_static_classes) then {
+	_vehicle setPosATL _position;
+} else {
+	_vehicle setPos _position;
 };
 
-if (_buildType isEqualTo BUILD_TYPE_GROUPS) exitWith {
-    [_className, _supplyCost, _ammoCost, _fuelCost] call KPLIB_fnc_buildSquad;
-    call _processPurchase;
+[_vehicle] call KPLIB_fnc_addObjectInit;
+[_vehicle] call KPLIB_fnc_clearCargo;
+
+if (_buildType == BUILD_TYPE_BUILDING || _buildType == BUILD_TYPE_FOB || (toLower _className) in KPLIB_storageBuildings || _classname isEqualTo KP_liberation_recycle_building || _classname isEqualTo KP_liberation_air_vehicle_building) then {
+	if (!build_vector) then {
+		_vehicle setVectorUp [0,0,1];
+	} else {
+		_vehicle setVectorUp surfaceNormal position _vehicle;
+	};
+} else {
+	_vehicle setVectorUp surfaceNormal position _vehicle;
 };
 
-if (_buildType isEqualTo BUILD_TYPE_INFANTRY) exitWith {
-    [_className, _supplyCost, _ammoCost, _fuelCost] call KPLIB_fnc_buildAi;
-    call _processPurchase;
+if(unitIsUAV _vehicle || _buildManned) then {
+    [_vehicle] call KPLIB_fnc_forceBluforCrew;
 };
 
-// TODO
-// Ghost vehicle
-// KeyDown Handler
-// Confirm Build
-// Manned Build
-// Repeat Build
-// No payment for FOB
+_vehicle allowDamage true;
+_vehicle setDamage 0;
+
+if(_buildType != BUILD_TYPE_BUILDING) then {
+    _vehicle addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
+    { _x addMPEventHandler ["MPKilled", {_this spawn kill_manager}]; true } count (crew _vehicle);
+};
