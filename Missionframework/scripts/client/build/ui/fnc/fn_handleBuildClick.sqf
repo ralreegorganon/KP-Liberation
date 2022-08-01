@@ -2,7 +2,7 @@
     File: fn_handleBuildClick.sqf
     Author: ColinM https://github.com/ColinM9991/KP-Liberation
     Date: 2022-07-28
-    Last Update: 2022-07-28
+    Last Update: 2022-08-01
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -30,7 +30,7 @@ if (_data isEqualTo "") exitWith{};
 
 private _parsedData = parseSimpleArray _data;
 _parsedData params [
-    ["_className", "", [""]],
+    ["_className", "", [[], ""]],
     ["_supplyCost", 0, [0]],
     ["_ammoCost", 0, [0]],
     ["_fuelCost", 0, [0]]
@@ -39,11 +39,13 @@ _parsedData params [
 private _buildType = [_parsedData] call KPLIB_fnc_getBuildType;
 
 // Call build script with _parsedData
-// [
-//     _className,
-//     _supplyCost,
-//     _ammoCost,
-//     _fuelCost,
-//     _buildType,
-//     _buildManned
-// ] call KPLIB_fnc_beginBuild;
+[
+    _className,
+    _supplyCost,
+    _ammoCost,
+    _fuelCost,
+    _buildType,
+    _buildManned
+] call KPLIB_fnc_buildItem;
+
+closeDialog 0;
