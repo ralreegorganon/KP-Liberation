@@ -32,11 +32,27 @@ params[
     ["_buildManned", false, [false]]
 ];
 
+private _nearfob = [] call KPLIB_fnc_getNearestFob;
+private _storage_areas = (_nearfob nearobjects (GRLIB_fob_range * 2)) select {(_x getVariable ["KP_liberation_storage_type",-1]) == 0};
+
+private _processPurchase = {
+    [_supplyCost, _ammoCost, _fuelCost, _className, _buildType, _storage_areas] remoteExec ["build_remote_call",2];
+};
+
 if (_buildType isEqualTo BUILD_TYPE_GROUPS) exitWith {
-    [_className, _supplyCost, _ammoCost, _fuelCost, _buildType] call KPLIB_fnc_buildSquad;
+    [_className, _supplyCost, _ammoCost, _fuelCost] call KPLIB_fnc_buildSquad;
+    call _processPurchase;
 };
 
 if (_buildType isEqualTo BUILD_TYPE_INFANTRY) exitWith {
-    [_className, _supplyCost, _ammoCost, _fuelCost, _buildType] call KPLIB_fnc_buildAi;
+    [_className, _supplyCost, _ammoCost, _fuelCost] call KPLIB_fnc_buildAi;
+    call _processPurchase;
 };
 
+// TODO
+// Ghost vehicle
+// KeyDown Handler
+// Confirm Build
+// Manned Build
+// Repeat Build
+// No payment for FOB
