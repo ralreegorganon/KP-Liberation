@@ -2,7 +2,7 @@
     File: fn_buildItem.sqf
     Author: ColinM - https://github.com/ColinM9991/KP-Liberation
     Date: 2022-08-01
-    Last Update: 2022-08-01
+    Last Update: 2022-08-02
     License: MIT License - http://www.opensource.org/licenses/MIT
     
     Description:
@@ -20,10 +20,10 @@
 #endif
 
 params[
-	["_className", "", [""]],
-	["_previewVehicle", objNull, [objNull]],
-	["_buildType", -1, [-1]],
-	["_buildManned", false, [false]]
+    ["_className", "", [""]],
+    ["_previewVehicle", objNull, [objNull]],
+    ["_buildType", -1, [-1]],
+    ["_buildManned", false, [false]]
 ];
 
 private _position = getPos _previewVehicle;
@@ -34,22 +34,22 @@ _vehicle = _classname createVehicle _position;
 _vehicle allowDamage false;
 _vehicle setdir _direction;
 if ((toLower (typeOf _vehicle)) in KPLIB_b_static_classes) then {
-	_vehicle setPosATL _position;
+    _vehicle setPosATL _position;
 } else {
-	_vehicle setPos _position;
+    _vehicle setPos _position;
 };
 
-[_vehicle] call KPLIB_fnc_addObjectInit;
-[_vehicle] call KPLIB_fnc_clearCargo;
-
-if (_buildType == BUILD_TYPE_BUILDING || _buildType == BUILD_TYPE_FOB || (toLower _className) in KPLIB_storageBuildings || _classname isEqualTo KP_liberation_recycle_building || _classname isEqualTo KP_liberation_air_vehicle_building) then {
-	if (!build_vector) then {
-		_vehicle setVectorUp [0,0,1];
-	} else {
-		_vehicle setVectorUp surfaceNormal position _vehicle;
-	};
+if(_buildType isEqualTo BUILD_TYPE_SECTOR) then {
+    _vehicle setVariable ["KP_liberation_storage_type", 1, true];
 } else {
-	_vehicle setVectorUp surfaceNormal position _vehicle;
+    [_vehicle] call KPLIB_fnc_addObjectInit;
+    [_vehicle] call KPLIB_fnc_clearCargo;
+};
+
+if (!build_vector && {_buildType isEqualTo BUILD_TYPE_BUILDING || _buildType isEqualTo BUILD_TYPE_FOB || (toLower _className) in KPLIB_storageBuildings || _classname isEqualTo KP_liberation_recycle_building || _classname isEqualTo KP_liberation_air_vehicle_building}) then {
+    _vehicle setVectorUp [0,0,1];
+} else {
+    _vehicle setVectorUp surfaceNormal position _vehicle;
 };
 
 if(unitIsUAV _vehicle || _buildManned) then {

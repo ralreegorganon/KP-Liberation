@@ -1,20 +1,21 @@
 /*
-    File: fn_buildItem.sqf
+    File: fn_handleBuild.sqf
     Author: ColinM - https://github.com/ColinM9991/KP-Liberation
     Date: 2022-08-01
     Last Update: 2022-08-02
     License: MIT License - http://www.opensource.org/licenses/MIT
     
     Description:
-        Builds the item.
+        Adds the key handler and begins the build preview mode.
     
     Parameter(s):
-        _className      - Classname for the item to build           [STRING or Array, defaults to ""]
-        _supplyCost     - How many supplies this item costs         [NUMBER, defaults to 0]
-        _ammoCost       - How much ammo this item costs             [NUMBER, defaults to 0]
-        _fuelCost       - How much fuel this item costs             [NUMBER, defaults to 0]
-        _buildType      - The build type, determined by the item    [NUMBER, defaults to -1]
-        _buildManned    - Should it be built with units             [BOOLEAN, defaults to false]
+        _className          - Classname for the item to build                               [STRING or Array, defaults to ""]
+        _supplyCost         - How many supplies this item costs                             [NUMBER, defaults to 0]
+        _ammoCost           - How much ammo this item costs                                 [NUMBER, defaults to 0]
+        _fuelCost           - How much fuel this item costs                                 [NUMBER, defaults to 0]
+        _buildType          - The build type, determined by the item                        [NUMBER, defaults to -1]
+        _buildManned        - Should it be built with units                                 [BOOLEAN, defaults to false]
+        _startingPosition   - The starting position which will define the max build radius  [ARRAY, defaults to player or nearest FOB position, depending on the build type]
     
     Returns:
         NONE
@@ -29,7 +30,8 @@ params[
     ["_ammoCost", 0, [0]],
     ["_fuelCost", 0, [0]],
     ["_buildType", -1, [-1]],
-    ["_buildManned", false, [false]]
+    ["_buildManned", false, [false]],
+    ["_startingPosition", [], [[]]]
 ];
 
 private _nearestFob = [] call KPLIB_fnc_getNearestFob;
@@ -60,7 +62,10 @@ KPLIB_buildingInProgress = true;
 while { KPLIB_buildingInProgress } do {
     private _ghostSpot = (markerPos "ghost_spot") findEmptyPosition [0, 100];
     private _vehicle = _className createVehicleLocal _ghostSpot;
-    private _startingPoint = if(_buildType != 99) then [{_nearestFob},{getPos player}];
+    private _startingPoint = _startingPosition;
+    if(_startingPoint isEqualTo []) then {
+        _startingPoint = if(_buildType != BUILD_TYPE_FOB) then [{_nearestFob},{getPos player}];
+    };
 
     _vehicle allowdamage false;
     _vehicle setVehicleLock "LOCKED";
@@ -101,18 +106,20 @@ while { KPLIB_buildingInProgress } do {
         _truePos = [_truePos select 0, _truePos select 1, (_truePos select 2) + build_elevation];
 
         if (((_truePos distance _startingPoint) < GRLIB_fob_range) && (((!surfaceIsWater _truePos) && (!surfaceIsWater getpos player)) || (_className in boats_names))) then {
+            KPLIB_buildInvalid = false;
             if ((toLower _className) in KPLIB_b_static_classes) then {
                 _vehicle setPosATL _truePos;
             } else {
                 _vehicle setpos _truePos;
             };
 
-            if (!build_vector && {_buildType == 6 || _buildType == 99 || (toLower _className) in KPLIB_storageBuildings || _className isEqualTo KP_liberation_recycle_building || _className isEqualTo KP_liberation_air_vehicle_building}) then {
+            if (!build_vector && {_buildType isEqualTo BUILD_TYPE_BUILDING || _buildType isEqualTo BUILD_TYPE_FOB || (toLower _className) in KPLIB_storageBuildings || _className isEqualTo KP_liberation_recycle_building || _className isEqualTo KP_liberation_air_vehicle_building}) then {
                 _vehicle setVectorUp [0,0,1];
             } else {
                 _vehicle setVectorUp surfaceNormal position _vehicle;
             };
         } else {
+            KPLIB_buildInvalid = true;
             _vehicle setpos _ghostSpot;
             if( ((surfaceIsWater _truePos) || (surfaceIsWater getpos player)) && !(_className in boats_names)) then {
                 GRLIB_ui_notif = localize "STR_BUILD_ERROR_WATER";

@@ -2,7 +2,7 @@
     File: fn_openBuildMenu.sqf
     Author: ColinM https://github.com/ColinM9991/KP-Liberation
     Date: 2022-07-28
-    Last Update: 2022-07-28
+    Last Update: 2022-08-02
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -71,6 +71,7 @@ _buildMannedButton  ctrlAddEventHandler["ButtonClick", { [true] call KPLIB_fnc_h
 
 // Add ListBox Event Handler to check affordability of items
 (_buildDialog displayCtrl BUILD_LNB_ITEMS) ctrlAddEventHandler ["LBSelChanged", { _this call KPLIB_fnc_handleLbSelChanged }];
+(_buildDialog displayCtrl BUILD_LNB_ITEMS) ctrlAddEventHandler ["LBDblClick", { [false] call KPLIB_handleBuildClick }];
 
 // Set the initial page
 [BUILD_TYPE_LIGHT] call KPLIB_fnc_setBuildListItems;

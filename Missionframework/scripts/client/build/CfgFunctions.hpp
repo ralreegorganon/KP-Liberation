@@ -2,11 +2,11 @@ class Build {
     file = "scripts\client\build\fnc";
 
     // Functions
-    class beginBuild                {};
     class buildAi                   {};
     class buildItem                 {};
     class buildSquad                {};
     class getBoundingDistance       {};
+    class handleBuild               {};
     class handleBuildAction         {};
     class handleBuildCancel         {};
     class handleBuildDistance       {};

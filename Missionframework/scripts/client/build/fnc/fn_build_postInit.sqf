@@ -6,16 +6,17 @@
     License: MIT License - http://www.opensource.org/licenses/MIT
     
     Description:
-        No description added yet.
+        Initializes the build variables in a single file.
     
     Parameter(s):
-        _localVariable - Description [DATATYPE, defaults to DEFAULTVALUE]
-    
+        NONE
+
     Returns:
         NONE
 */
 
 KPLIB_isBuilding = false;
+KPLIB_buildInvalid = false;
 KPLIB_hasCancelledBuild = false;
 KPLIB_buildingInProgress = false;
 KPLIB_buildType = -1;

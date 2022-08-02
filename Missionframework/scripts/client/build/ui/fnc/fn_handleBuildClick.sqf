@@ -2,7 +2,7 @@
     File: fn_handleBuildClick.sqf
     Author: ColinM https://github.com/ColinM9991/KP-Liberation
     Date: 2022-07-28
-    Last Update: 2022-08-01
+    Last Update: 2022-08-02
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -24,9 +24,12 @@ params[
 disableSerialization;
 private _buildDialogItemsList = (findDisplay BUILD_DIALOG) displayCtrl BUILD_LNB_ITEMS;
 private _selectedRow = lnbCurSelRow _buildDialogItemsList;
+
+if(_selectedRow isEqualTo -1) exitWith {};
+
 private _data = _buildDialogItemsList lnbData [_selectedRow, 0];
 
-if (_data isEqualTo "") exitWith{};
+if (_data isEqualTo "") exitWith {};
 
 private _parsedData = parseSimpleArray _data;
 _parsedData params [
@@ -46,6 +49,6 @@ private _buildType = [_parsedData] call KPLIB_fnc_getBuildType;
     _fuelCost,
     _buildType,
     _buildManned
-] spawn KPLIB_fnc_beginBuild;
+] spawn KPLIB_fnc_handleBuild;
 
 closeDialog 0;
