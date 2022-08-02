@@ -28,19 +28,23 @@ params[
 
 private _position = getPos _previewVehicle;
 private _direction = getDir _previewVehicle;
-private _vector = vectorUp _previewVehicle;
 
 deleteVehicle _previewVehicle;
 
 _vehicle = _classname createVehicle _position;
 _vehicle allowDamage false;
 _vehicle setDir _direction;
-_vehicle setVectorUp _vector;
 
 if ((toLower (typeOf _vehicle)) in KPLIB_b_static_classes) then {
     _vehicle setPosATL _position;
 } else {
     _vehicle setPos _position;
+};
+
+if (!build_vector && {_buildType isEqualTo BUILD_TYPE_BUILDING || _buildType isEqualTo BUILD_TYPE_FOB || (toLower _className) in KPLIB_storageBuildings || _classname isEqualTo KP_liberation_recycle_building || _classname isEqualTo KP_liberation_air_vehicle_building}) then {
+    _vehicle setVectorUp [0,0,1];
+} else {
+    _vehicle setVectorUp surfaceNormal position _vehicle;
 };
 
 if(_buildType isEqualTo BUILD_TYPE_SECTOR) then {

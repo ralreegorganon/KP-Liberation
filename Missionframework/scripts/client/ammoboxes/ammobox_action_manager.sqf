@@ -1,4 +1,4 @@
-waitUntil {!isNil "build_confirmed"};
+waitUntil {!isNil "KPLIB_isBuilding"};
 waitUntil {!isNil "one_synchro_done"};
 waitUntil {!isNil "one_eco_done"};
 waitUntil {one_synchro_done};
