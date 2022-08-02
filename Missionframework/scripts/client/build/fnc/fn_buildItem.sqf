@@ -28,11 +28,15 @@ params[
 
 private _position = getPos _previewVehicle;
 private _direction = getDir _previewVehicle;
+private _vector = vectorUp _previewVehicle;
+
 deleteVehicle _previewVehicle;
 
 _vehicle = _classname createVehicle _position;
 _vehicle allowDamage false;
-_vehicle setdir _direction;
+_vehicle setDir _direction;
+_vehicle setVectorUp _vector;
+
 if ((toLower (typeOf _vehicle)) in KPLIB_b_static_classes) then {
     _vehicle setPosATL _position;
 } else {
@@ -46,20 +50,14 @@ if(_buildType isEqualTo BUILD_TYPE_SECTOR) then {
     [_vehicle] call KPLIB_fnc_clearCargo;
 };
 
-if (!build_vector && {_buildType isEqualTo BUILD_TYPE_BUILDING || _buildType isEqualTo BUILD_TYPE_FOB || (toLower _className) in KPLIB_storageBuildings || _classname isEqualTo KP_liberation_recycle_building || _classname isEqualTo KP_liberation_air_vehicle_building}) then {
-    _vehicle setVectorUp [0,0,1];
-} else {
-    _vehicle setVectorUp surfaceNormal position _vehicle;
-};
-
 if(unitIsUAV _vehicle || _buildManned) then {
     [_vehicle] call KPLIB_fnc_forceBluforCrew;
 };
-
-_vehicle allowDamage true;
-_vehicle setDamage 0;
 
 if(_buildType != BUILD_TYPE_BUILDING) then {
     _vehicle addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
     { _x addMPEventHandler ["MPKilled", {_this spawn kill_manager}]; true } count (crew _vehicle);
 };
+
+_vehicle allowDamage true;
+_vehicle setDamage 0;
