@@ -136,6 +136,7 @@ while { KPLIB_buildingInProgress } do {
         deleteVehicle _vehicle;
         KPLIB_hasCancelledBuild = false;
         KPLIB_buildingInProgress = false;
+        KPLIB_isBuilding = false;
     };
 
     [_className, _vehicle, _buildType, _buildManned] call KPLIB_fnc_buildItem;
