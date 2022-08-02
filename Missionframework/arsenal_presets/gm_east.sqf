@@ -181,13 +181,13 @@ GRLIB_arsenal_items = [
     "ACRE_VHF30108SPIKE",                                           // VHF30108 GS
 
     // TFAR Items
-    "tf_anprc148jem",                                               // AN/PRC-148 JEM
-    "tf_anprc152",                                                  // AN/PRC-152
-    "tf_anprc154_1",                                                // AN/PRC-154
-    "tf_fadak",                                                     // FADAK
-    "tf_microdagr",                                                 // MicroDAGR Radio Programmer
-    "tf_pnr1000a_1",                                                // PNR-1000A
-    "tf_rf7800str"                                                  // PF-7800S-TR
+    "TFAR_anprc148jem",                                               // AN/PRC-148 JEM
+    "TFAR_anprc152",                                                  // AN/PRC-152
+    "TFAR_anprc154_1",                                                // AN/PRC-154
+    "TFAR_fadak",                                                     // FADAK
+    "TFAR_microdagr",                                                 // MicroDAGR Radio Programmer
+    "TFAR_pnr1000a_1",                                                // PNR-1000A
+    "TFAR_rf7800str"                                                  // PF-7800S-TR
 ];
 
 GRLIB_arsenal_backpacks = [

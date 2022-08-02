@@ -85,6 +85,23 @@ KPLIB_objectInits = [
         {_this setVariable ["KP_liberation_storage_type", 0, true];}
     ],
 
+    // Switch on AA radars
+    [
+        ["B_Radar_System_01_F"],
+        {
+            _this setVehicleRadar 1;
+        }
+    ],
+
+    // Lock SAM allSites
+    [
+        ["B_Radar_System_01_F", "B_SAM_System_03_F"],
+        {
+            _this setVehicleLock "LOCKED";
+            _this lockDriver true;
+        }
+    ],
+
     // Add ACE variables to corresponding building types
     [
         [KP_liberation_recycle_building],

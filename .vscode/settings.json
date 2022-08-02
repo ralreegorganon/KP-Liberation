@@ -1,6 +1,9 @@
 {
     "sqf.enableCBA": true,
     "sqf.enableACE3": true,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "editor.detectIndentation": true,
     "files.associations": {
         "*.hpp": "ext",
         "*.h":   "ext",
@@ -50,7 +53,7 @@
             "language": "sqf",
             "template": [
                 "File: <<filename>>",
-                "Author: KP Liberation Dev Team - https://github.com/KillahPotatoes",
+                "Author: ColinM - https://github.com/ColinM9991/KP-Liberation",
                 "Date: <<filecreated('YYYY-MM-DD')>>",
                 "Last Update:",
                 "License: MIT License - http://www.opensource.org/licenses/MIT",
@@ -62,14 +65,14 @@
                 "    _localVariable - Description [DATATYPE, defaults to DEFAULTVALUE]",
                 "",
                 "Returns:",
-                "    Function reached the end [BOOL]"
+                "    NONE"
             ]
         },
         {
             "language": "ext",
             "template": [
                 "File: <<filename>>",
-                "Author: KP Liberation Dev Team - https://github.com/KillahPotatoes",
+                "Author: ColinM - https://github.com/ColinM9991/KP-Liberation",
                 "Date: <<filecreated('YYYY-MM-DD')>>",
                 "Last Update:",
                 "License: MIT License - http://www.opensource.org/licenses/MIT",

@@ -1,0 +1,61 @@
+/*
+    File: fn_handleBuildAction.sqf
+    Author: ColinM https://github.com/ColinM9991/KP-Liberation
+    Date: 2022-07-20
+    Last Update: 2022-07-20
+    License: MIT License - http://www.opensource.org/licenses/MIT
+
+    Description:
+        Intended to be called from the KeyDown Display Event Handler.
+        This script manages the placement of an object during build time by using key presses.
+        It replaces the old action menu build system
+
+    Parameter(s):
+        _key              - The pressed key
+        _shift            - Was Shift pressed
+        _ctrl             - Was CTRL pressed
+
+    Returns:
+        True to block user input from performing any actions when build mode is engaged.
+*/
+#ifndef MAX_DISTANCE
+#include "..\ui\liberation_build_info.hpp"
+#endif
+
+params [
+	["_key", -1, [-1]],
+	["_shift", false, [false]],
+	["_ctrl", false, [false]]
+];
+
+if (build_confirmed != 1 || {
+	!_ctrl
+}) exitWith {};
+
+private _object = player getVariable ["KP_liberation_build_ghost", objNull];
+
+switch (_key) do {
+	case KEY_ROTATE_LEFT;
+	case KEY_ROTATE_RIGHT: {
+        [_key isEqualTo KEY_ROTATE_RIGHT, _shift, _object] call KPLIB_fnc_handleBuildRotation;
+    };
+
+	case KEY_LOWER;
+	case KEY_RAISE: {
+        [_key isEqualTo KEY_RAISE, _shift] call KPLIB_fnc_handleBuildElevation;
+    };
+
+	case KEY_CLOSER;
+	case KEY_FURTHER: {
+		[_key isEqualTo KEY_FURTHER, _shift, _object] call KPLIB_fnc_handleBuildDistance;
+	};
+
+	case KEY_CANCEL: {
+        [] call KPLIB_fnc_handleBuildCancel;
+    };
+	case KEY_PLACE: {
+        [_shift] call KPLIB_fnc_handleBuildPlacement;
+    };
+};
+
+true

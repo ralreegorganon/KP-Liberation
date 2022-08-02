@@ -1,11 +1,10 @@
 // TODO This needs absolutely a code refactoring, flamethrower or nuke
 
-private [ "_maxdist", "_truepos", "_built_object_remote", "_pos", "_grp", "_classname", "_idx", "_unitrank", "_posfob", "_ghost_spot", "_vehicle", "_dist", "_actualdir", "_near_objects", "_near_objects_25", "_debug_colisions" ];
+private [ "_maxdist", "_truepos", "_built_object_remote", "_pos", "_grp", "_classname", "_idx", "_unitrank", "_posfob", "_ghost_spot", "_vehicle", "_dist", "_actualdir"];
 
 build_confirmed = 0;
 _maxdist = GRLIB_fob_range;
 _truepos = [];
-_debug_colisions = false;
 KP_vector = true;
 
 private _object_spheres = [];
@@ -79,26 +78,11 @@ while { true } do {
                 _posfob = [] call KPLIB_fnc_getNearestFob;
             };
 
-            _idactcancel = -1;
-            _idactsnap = -1;
-            _idactplacebis = -1;
             _idactvector = -1;
-            if (buildtype != 99 ) then {
-                _idactcancel = player addAction ["<t color='#B0FF00'>" + localize "STR_CANCEL" + "</t> <img size='2' image='res\ui_cancel.paa'/>",{build_confirmed = 3; GRLIB_ui_notif = ""; hint localize "STR_CANCEL_HINT";},"",-725,false,true,"","build_confirmed == 1"];
-            };
-            if (buildtype == 6 ) then {
-                _idactplacebis = player addAction ["<t color='#B0FF00'>" + localize "STR_PLACEMENT_BIS" + "</t> <img size='2' image='res\ui_confirm.paa'/>",{build_confirmed = 2; repeatbuild = true; hint localize "STR_CONFIRM_HINT";},"",-785,false,false,"","build_invalid == 0 && build_confirmed == 1"];
-            };
+            
             if (buildtype == 6 || buildtype == 99  || (toLower _classname) in KPLIB_storageBuildings || _classname isEqualTo KP_liberation_recycle_building || _classname isEqualTo KP_liberation_air_vehicle_building) then {
-                _idactsnap = player addAction ["<t color='#B0FF00'>" + localize "STR_GRID" + "</t>",{gridmode = gridmode + 1;},"",-735,false,false,"","build_confirmed == 1"];
                 _idactvector = player addAction ["<t color='#B0FF00'>" + localize "STR_VECACTION" + "</t>",{KP_vector = !KP_vector;},"",-800,false,false,"","build_confirmed == 1"];
             };
-
-            _idactrotate = player addAction ["<t color='#B0FF00'>" + localize "STR_ROTATION" + "</t> <img size='2' image='res\ui_rotation.paa'/>",{build_rotation = build_rotation + 90;},"",-750,false,false,"","build_confirmed == 1"];
-            _idactraise = player addAction ["<t color='#B0FF00'>" + localize "STR_RAISE" + "</t>",{build_elevation = build_elevation + 0.2;},"",-765,false,false,"","build_confirmed == 1"];
-            _idactlower = player addAction ["<t color='#B0FF00'>" + localize "STR_LOWER" + "</t>",{build_elevation = build_elevation - 0.2;},"",-766,false,false,"","build_confirmed == 1"];
-            _idactplace = player addAction ["<t color='#B0FF00'>" + localize "STR_PLACEMENT" + "</t> <img size='2' image='res\ui_confirm.paa'/>",{build_confirmed = 2; hint localize "STR_CONFIRM_HINT";},"",-775,false,true,"","build_invalid == 0 && build_confirmed == 1"];
-
             _ghost_spot = (markerPos "ghost_spot") findEmptyPosition [0,100];
 
             _vehicle = _classname createVehicleLocal _ghost_spot;
@@ -107,9 +91,17 @@ while { true } do {
             _vehicle enableSimulationGlobal false;
             _vehicle setVariable ["KP_liberation_preplaced", true, true];
 
+            player setVariable ["KP_liberation_build_ghost", _vehicle];
+
+            private _idKeyDownHandler = (findDisplay 46) displayAddEventHandler["KeyDown", {
+                [_this select 1, _this select 2, _this select 3, _vehicle] call KPLIB_fnc_handleBuildAction;
+            }];
+
             _dist = 0.6 * (sizeOf _classname);
             if (_dist < 3.5) then { _dist = 3.5 };
             _dist = _dist + 1;
+
+            build_distance = _dist;
 
             for [{_i=0}, {_i<5}, {_i=_i+1}] do {
                 _vehicle setObjectTextureGlobal [_i, '#(rgb,8,8,3)color(0,1,0,0.8)'];
@@ -120,9 +112,9 @@ while { true } do {
             while { build_confirmed == 1 && alive player } do {
                 _truedir = 90 - (getdir player);
                 if ((toLower (typeOf _vehicle)) in KPLIB_b_static_classes) then {
-                    _truepos = [((getposATL player) select 0) + (_dist * (cos _truedir)), ((getposATL player) select 1) + (_dist * (sin _truedir)),((getposATL player) select 2)];
+                    _truepos = [((getposATL player) select 0) + (build_distance * (cos _truedir)), ((getposATL player) select 1) + (build_distance * (sin _truedir)),((getposATL player) select 2)];
                 } else {
-                    _truepos = [((getpos player) select 0) + (_dist * (cos _truedir)), ((getpos player) select 1) + (_dist * (sin _truedir)),0];
+                    _truepos = [((getpos player) select 0) + (build_distance * (cos _truedir)), ((getpos player) select 1) + (build_distance * (sin _truedir)),0];
                 };
                 _actualdir = ((getdir player) + build_rotation);
                 if ( _classname == "Land_Cargo_Patrol_V1_F" || _classname == "Land_PortableLight_single_F" ) then { _actualdir = _actualdir + 180 };
@@ -155,55 +147,7 @@ while { true } do {
 
                 _truepos = [_truepos select 0, _truepos select 1, (_truepos select 2) +  build_elevation];
 
-                _near_objects = (_truepos nearobjects ["AllVehicles", _dist]) ;
-                _near_objects = _near_objects + (_truepos nearobjects [FOB_box_typename, _dist]);
-                _near_objects = _near_objects + (_truepos nearobjects [Arsenal_typename, _dist]);
-
-                _near_objects_25 = (_truepos nearobjects ["AllVehicles", 50]) ;
-                _near_objects_25 = _near_objects_25 + (_truepos nearobjects [FOB_box_typename, 50]);
-                _near_objects_25 = _near_objects_25 + (_truepos nearobjects [Arsenal_typename, 50]);
-
-                if(	buildtype != 6 ) then {
-                    _near_objects = _near_objects + (_truepos nearobjects ["Static", _dist]);
-                    _near_objects_25 = _near_objects_25 + (_truepos nearobjects ["Static", 50]);
-                };
-
-                private _remove_objects = [];
-                {
-                    private _typeOfX = typeOf _x;
-                    if ((_x isKindOf "Animal") || (_typeOfX in GRLIB_ignore_colisions_when_building) || (_typeOfX isKindOf "CAManBase") || (isPlayer _x) || (_x == _vehicle) || ((toLower (typeOf _vehicle)) in KPLIB_b_static_classes)) then {
-                        _remove_objects pushback _x;
-                    };
-                } foreach _near_objects;
-
-                private _remove_objects_25 = [];
-                {
-                    private _typeOfX = typeOf _x;
-                    if ((_x isKindOf "Animal") || (_typeOfX in GRLIB_ignore_colisions_when_building) || (_typeOfX isKindOf "CAManBase") || (isPlayer _x) || (_x == _vehicle) || ((toLower (typeOf _vehicle)) in KPLIB_b_static_classes)) then {
-                        _remove_objects_25 pushback _x;
-                    };
-                } foreach _near_objects_25;
-
-                _near_objects = _near_objects - _remove_objects;
-                _near_objects_25 = _near_objects_25 - _remove_objects_25;
-
-                if ( count _near_objects == 0 ) then {
-                    {
-                        _dist22 = 0.6 * (sizeOf (typeof _x));
-                        if ( _dist22 < 1 ) then { _dist22 = 1 };
-                        if (_truepos distance _x < _dist22) then {
-                            _near_objects pushback _x;
-                        };
-                    } foreach _near_objects_25;
-                };
-
-                if ( count _near_objects != 0 ) then {
-                    GRLIB_conflicting_objects = _near_objects;
-                } else {
-                    GRLIB_conflicting_objects = [];
-                };
-
-                if (count _near_objects == 0 && ((_truepos distance _posfob) < _maxdist) && (  ((!surfaceIsWater _truepos) && (!surfaceIsWater getpos player)) || (_classname in boats_names) ) ) then {
+                if (((_truepos distance _posfob) < _maxdist) && (  ((!surfaceIsWater _truepos) && (!surfaceIsWater getpos player)) || (_classname in boats_names) ) ) then {
 
                     if ( ((buildtype == 6) || (buildtype == 99)) && ((gridmode % 2) == 1) ) then {
                         _vehicle setpos [round (_truepos select 0),round (_truepos select 1), _truepos select 2];
@@ -236,16 +180,6 @@ while { true } do {
                     };
                     _vehicle setpos _ghost_spot;
                     build_invalid = 1;
-                    if(count _near_objects > 0) then {
-                        GRLIB_ui_notif = format [localize "STR_PLACEMENT_IMPOSSIBLE",count _near_objects, round _dist];
-
-                        if (_debug_colisions) then {
-                            private [ "_objs_classnames" ];
-                            _objs_classnames = [];
-                            { _objs_classnames pushback (typeof _x) } foreach _near_objects;
-                            hint format [ "Colisions : %1", _objs_classnames ];
-                        };
-                    };
                     if( ((surfaceIsWater _truepos) || (surfaceIsWater getpos player)) && !(_classname in boats_names)) then {
                         GRLIB_ui_notif = localize "STR_BUILD_ERROR_WATER";
                     };
@@ -337,22 +271,13 @@ while { true } do {
                 };
             };
 
-            if ( _idactcancel != -1 ) then {
-                player removeAction _idactcancel;
-            };
-            if ( _idactsnap != -1 ) then {
-                player removeAction _idactsnap;
-            };
-            if ( _idactplacebis != -1 ) then {
-                player removeAction _idactplacebis;
-            };
             if ( _idactvector != -1 ) then {
                 player removeAction _idactvector;
             };
-            player removeAction _idactrotate;
-            player removeAction _idactplace;
-            player removeAction _idactraise;
-            player removeAction _idactlower;
+
+            (findDisplay 46) displayRemoveEventHandler ["KeyDown", _idKeyDownHandler];
+            
+            player setVariable ["KP_liberation_build_ghost", objNull];
 
             if(buildtype == 99) then {
                 _new_fob = getpos player;

@@ -220,7 +220,7 @@ if ((!(_sector in blufor_sectors)) && (([markerPos _sector, [_opforcount] call K
         _managed_units = _managed_units + (units _grp);
     };
 
-    if (_spawncivs && GRLIB_civilian_activity > 0) then {
+    if (KPLIB_use_liberation_civilians && {_spawncivs && GRLIB_civilian_activity > 0}) then {
         _managed_units = _managed_units + ([_sector] call KPLIB_fnc_spawnCivilians);
     };
 

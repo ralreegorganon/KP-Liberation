@@ -94,8 +94,6 @@ GRLIB_arsenal_weapons = [
     "rhs_weap_m4a1_wd_mstock",                                      // M4A1 PIP (Woodland/Magpull Stock)
     "rhs_weap_m4a1_wd",                                             // M4A1 PIP (Woodland)
     "rhs_weap_m4a1",                                                // M4A1 PIP
-    "rhs_weap_M590_5RD",                                            // M590A1 (Short)
-    "rhs_weap_M590_8RD",                                            // M590A1 (Long)
     "rhs_weap_m72a7",                                               // M72A7
     "rhs_weap_maaws",                                               // M3 MAAWS
     "rhs_weap_mk17_CQC",                                            // Mk 17 Mod 0 (CQC)
@@ -110,9 +108,6 @@ GRLIB_arsenal_weapons = [
     "rhs_weap_mk18_m320",                                           // Mk 18 Mod 1 (M320)
     "rhs_weap_mk18_wd",                                             // Mk 18 Mod 1 (Woodland)
     "rhs_weap_mk18",                                                // Mk 18 Mod 1
-    "rhs_weap_SCARH_USA_CQC",                                       // SCAR-H (USA/CQC)
-    "rhs_weap_SCARH_USA_LB",                                        // SCAR-H (USA/LB)
-    "rhs_weap_SCARH_USA_STD",                                       // SCAR-H (USA/STD)
     "rhs_weap_smaw_green",                                          // MK153 Mod 0 SMAW (Green)
     "rhs_weap_smaw",                                                // MK153 Mod 0 SMAW (Black)
     "rhs_weap_sr25_d",                                              // Mk 11 Mod 0 (Desert)
@@ -131,7 +126,15 @@ GRLIB_arsenal_weapons = [
     "rhsusf_weap_MP7A2_aor1",                                       // MP7A2 (AOR1)
     "rhsusf_weap_MP7A2_desert",                                     // MP7A2 (Desert)
     "rhsusf_weap_MP7A2_winter",                                     // MP7A2 (Winter)
-    "rhsusf_weap_MP7A2"                                             // MP7A2
+    "rhsusf_weap_MP7A2",                                            // MP7A2
+    "rhsusf_weap_MP7A2_folded",                                     // MP7 Folded
+    "rhs_weap_m14_socom_rail",                                      // M14 SOCOM Rail
+    "rhs_weap_m14_socom",                                           // M14 SOCOM
+    "rhs_weap_m14_ris_fiberglass",                                  // M14 RIS Fiberglass
+    "rhs_weap_m14_rail_fiberglass",                                 // M14 Rail Fiberglass
+    "arifle_SPAR_03_blk_F",                                         // SPAR-17 7.62 mm (Black)
+    "arifle_SPAR_03_khk_F",                                         // SPAR-17 7.62 mm (Khaki)
+    "arifle_SPAR_03_snd_F"                                          // SPAR-17 7.62 mm (Sand)
 ];
 
 GRLIB_arsenal_magazines = [
@@ -204,6 +207,10 @@ GRLIB_arsenal_magazines = [
     "rhs_mag_30Rnd_556x45_Mk318_Stanag_Pull",                       // 30rnd STANAG (Puller) Mk318 Mod 0
     "rhs_mag_30Rnd_556x45_Mk318_Stanag_Ranger",                     // 30rnd STANAG (Ranger) Mk318 Mod 0
     "rhs_mag_30Rnd_556x45_Mk318_Stanag",                            // 30rnd STANAG Mk318 Mod 0
+    "ACE_30Rnd_556x45_Stanag_Tracer_Dim",                           // 30rnd STANAG 556 Tracer Dim
+    "ACE_20Rnd_762x51_Mag_Tracer_Dim",                              // 20rnd 762 Tracer Dim
+    "ACE_20Rnd_762x51_Mk319_Mod_0_Mag",                             // 20rnd 762 Mk319
+    "rhsusf_20Rnd_762x51_m80_Mag",                                  // 20rnd 726 M80
     "rhs_mag_an_m14_th3",                                           // AN-M14 TH3 Invendenary Grenade
     "rhs_mag_an_m8hc",                                              // AN-M8HC White Smooke
     "rhs_mag_m18_green",                                            // M18 Green Smoke Grenade
@@ -218,6 +225,11 @@ GRLIB_arsenal_magazines = [
     "rhs_mag_M585_white",                                           // M585 White Flare Round
     "rhs_mag_m661_green",                                           // M661 Green Flare Round
     "rhs_mag_m662_red",                                             // M662 Red Flare Round
+    "UGL_FlareWhite_F",                                             // Flare Round White
+    "UGL_FlareGreen_F",                                             // Flare Round Green
+    "UGL_FlareRed_F",                                               // Flare Round Red
+    "UGL_FlareYellow_F",                                            // Flare Round Yellow
+    "UGL_FlareCIR_F",                                               // Flare Round IR
     "rhs_mag_m67",                                                  // M67 Fragmentation Grenade
     "rhs_mag_m69",                                                  // M69 Practice Grenade
     "rhs_mag_m713_Red",                                             // M713 Red Smoke Round
@@ -225,12 +237,10 @@ GRLIB_arsenal_magazines = [
     "rhs_mag_m715_Green",                                           // M715 Green Smoke Round
     "rhs_mag_m716_yellow",                                          // M716 Yellow Smoke Round
     "rhs_mag_M781_Practice",                                        // M781 Practice Round
-    "rhs_mag_m7a3_cs",                                              // M7A3 CS Gas Grenade
+    "ACE_HuntIR_M203",                                              // HuntIR Round
     "rhs_mag_maaws_HE",                                             // FFV441 HE
     "rhs_mag_maaws_HEAT",                                           // FFV751 HEAT
     "rhs_mag_maaws_HEDP",                                           // FFV502 HEDP
-    "rhs_mag_mk3a2",                                                // MK3A2 Concussion Grenade
-    "rhs_mag_mk84",                                                 // M84 Stun Grenade
     "rhs_mag_six12_slug",                                           // Six-12 Slug
     "rhs_mag_smaw_HEAA",                                            // Mk.6 HEAA
     "rhs_mag_smaw_HEDP",                                            // Mk.3 HEDP
@@ -287,7 +297,6 @@ GRLIB_arsenal_magazines = [
     "rhsusf_50Rnd_762x51_m80a1epr",                                 // 50rnd M240 Softpack M80A1 EPR
     "rhsusf_50Rnd_762x51_m82_blank",                                // 50rnd M240 Belt M82 (Blank)
     "rhsusf_50Rnd_762x51",                                          // 50rnd M240 Softpack M80
-    "rhsusf_5Rnd_00Buck",                                           // 5Rnd .00 Buckshot
     "rhsusf_5Rnd_300winmag_xm2010",                                 // 5Rnd .300WM Mk248 MOD 1
     "rhsusf_5Rnd_762x51_AICS_m118_special_Mag",                     // 5Rnd AICS M118
     "rhsusf_5Rnd_762x51_AICS_m62_Mag",                              // 5Rnd AICS M62 (Tracer)
@@ -295,17 +304,9 @@ GRLIB_arsenal_magazines = [
     "rhsusf_5Rnd_762x51_m118_special_Mag",                          // 5Rnd M118
     "rhsusf_5Rnd_762x51_m62_Mag",                                   // 5Rnd M62 (Tracer)
     "rhsusf_5Rnd_762x51_m993_Mag",                                  // 5Rnd M993 AP
-    "rhsusf_5Rnd_FRAG",                                             // 5Rnd 12g FRAG
-    "rhsusf_5Rnd_HE",                                               // 5Rnd 12g HE-EP
-    "rhsusf_5Rnd_Slug",                                             // 5Rnd 12g Slug
-    "rhsusf_8Rnd_00Buck",                                           // 8Rnd .00 Buckshot
-    "rhsusf_8Rnd_FRAG",                                             // 8Rnd 12g FRAG
-    "rhsusf_8Rnd_HE",                                               // 8Rnd 12g HE-EP
-    "rhsusf_8Rnd_Slug",                                             // 8Rnd 12g Slug
     "rhsusf_m112_mag",                                              // M112
     "rhsusf_m112x4_mag",                                            // M112 (x4)
     "rhsusf_mag_10Rnd_STD_50BMG_M33",                               // 10rnd M107 M33
-    "rhsusf_mag_10Rnd_STD_50BMG_mk211",                             // 10rnd M107 Mk211
     "rhsusf_mag_15Rnd_9x19_FMJ",                                    // 15rnd M9 M882 FMJ
     "rhsusf_mag_15Rnd_9x19_JHP",                                    // 15rnd M9 Mk243 JHP
     "rhsusf_mag_17Rnd_9x19_FMJ",                                    // 17rnd Glock M882 FMJ
@@ -331,6 +332,7 @@ GRLIB_arsenal_magazines = [
     "rhsusf_mine_m49a1_10m_mag",                                    // M49A1 (10m)
     "rhsusf_mine_m49a1_3m_mag",                                     // M49A1 (3m)
     "rhsusf_mine_m49a1_6m_mag",                                     // M49A1 (6m)
+    "20Rnd_762x51_Mag",                                             // 7.62 mm 20Rnd Mag
 
     // Vanilla Standard Grenades & Explosives
     "APERSBoundingMine_Range_Mag",                                  // APERS Bounding Mine
@@ -353,7 +355,10 @@ GRLIB_arsenal_magazines = [
     "IEDUrbanSmall_Remote_Mag",                                     // Small IED (Urban)
     "SatchelCharge_Remote_Mag",                                     // Explosive Satchel
     "SLAMDirectionalMine_Wire_Mag",                                 // M6 SLAM Mine
-    "TrainingMine_Mag"                                              // Training Mine
+    "TrainingMine_Mag",                                             // Training Mine
+    "murshun_cigs_matches",
+    "murshun_cigs_lighter",
+    "murshun_cigs_cigpack"
 ];
 
 GRLIB_arsenal_items = [
@@ -698,7 +703,6 @@ GRLIB_arsenal_items = [
     "rhsusf_acc_ACOG2",                                             // M150 RCO (ARD)
     "rhsusf_acc_ACOG3_USMC",                                        // AN/PVQ-31A (ARD/Lens Cover)
     "rhsusf_acc_ACOG3",                                             // M150 RCO (ARD/Lens Cover)
-    "rhsusf_acc_anpas13gv1",                                        // AN/PAS-13G(V)1
     "rhsusf_acc_anpeq15_bk_light",                                  // AN/PEQ-15/M952V Black (Light)
     "rhsusf_acc_anpeq15_bk_top",                                    // AN/PEQ-15 Black (Top)
     "rhsusf_acc_anpeq15_bk",                                        // AN/PEQ-15/M952V Black (Laser)
@@ -745,6 +749,7 @@ GRLIB_arsenal_items = [
     "rhsusf_acc_LEUPOLDMK4_d",                                      // Mk. 4 M3 (Desert)
     "rhsusf_acc_LEUPOLDMK4_wd",                                     // Mk. 4 M3 (Woodland)
     "rhsusf_acc_LEUPOLDMK4",                                        // Mk. 4 ER/T 3.5-10x M3
+    "rhsusaf_acc_m14_flashsupressor",                               // M14 Flash Suppressor
     "rhsusf_acc_M2010S_d",                                          // TiTan (Desert)
     "rhsusf_acc_M2010S_sa",                                         // TiTan (Semi-Arid)
     "rhsusf_acc_M2010S_wd",                                         // TiTan (Woodland)
@@ -768,6 +773,8 @@ GRLIB_arsenal_items = [
     "rhsusf_acc_mrds",                                              // MRDS
     "rhsusf_acc_nt4_black",                                         // NT4 QDSS (Black)
     "rhsusf_acc_nt4_tan",                                           // NT4 QDSS (Tan)
+    "rhsusf_acc_nxs_5522x56_md_sun",                                // Long Range Scope (w/ Sun shade)
+    "rhsusf_acc_nxs_5522x56_md",                                    // Long Range Scope (w/o Sun shade)
     "rhsusf_acc_omega9k",                                           // SILENCERCO OMEGA 9K
     "rhsusf_acc_premier_anpvs27",                                   // M8541A + AN/PVS-27
     "rhsusf_acc_premier_low",                                       // M8541A (low mount)
@@ -821,10 +828,10 @@ GRLIB_arsenal_items = [
     "rhsusf_bino_m24_ARD",                                          // M24 Binoculars (ARD)
     "rhsusf_bino_m24",                                              // M24 Binoculars
     "rhsusf_Rhino",                                                 // Rhino mount
+    "optic_MRCO",                                                   // IOR Valdada - RCO
 
     // Vanilla Standard Items
     "acc_flashlight_pistol",                                        // Pistol Flashlight
-    "B_UavTerminal",                                                // UAV Terminal [NATO]
     "DroneDetector",                                                // Drone Detector
     "FirstAidKit",                                                  // First Aid Kit
     "G_B_Diving",                                                   // Diving Goggles [NATO]
@@ -833,6 +840,7 @@ GRLIB_arsenal_items = [
     "ItemMap",                                                      // Map
     "ItemRadio",                                                    // Radio
     "ItemWatch",                                                    // Watch
+    "Laserdesignator",                                              // Laser Designator
     "Medikit",                                                      // Medikit
     "MineDetector",                                                 // Mine Detector
     "ToolKit",                                                      // Toolkit
@@ -846,6 +854,9 @@ GRLIB_arsenal_items = [
     "V_RebreatherB",                                                // Rebreather [NATO]
 
     // ACE Items
+    "acc_pointer_IR",                                               // Laser Pointer (red IR)
+    "ACE_acc_pointer_red",                                          // Laser Pointer (red)
+    "ACE_acc_pointer_green_IR",                                     // Laser Pointer (green IR)
     "ACE_acc_pointer_green",                                        // Laser Pointer (green)
     "ACE_adenosine",                                                // Adenosine autoinjector
     "ACE_Altimeter",                                                // Altimeter Watch
@@ -861,7 +872,6 @@ GRLIB_arsenal_items = [
     "ACE_Chemlight_Shield",                                         // Chemlight Shield (Empty)
     "ACE_Clacker",                                                  // M57 Firing Device
     "ACE_DAGR",                                                     // DAGR
-    "ACE_DeadManSwitch",                                            // Dead Man's Switch
     "ACE_DefusalKit",                                               // Defusal Kit
     "ace_dragon_sight",                                             // SU-36/P Daysight
     "ACE_EarPlugs",                                                 // Earplugs
@@ -876,6 +886,7 @@ GRLIB_arsenal_items = [
     "ACE_HuntIR_monitor",                                           // HuntIR monitor
     "ACE_IR_Strobe_Item",                                           // IR Strobe
     "ACE_Kestrel4500",                                              // Kestrel 4500NV
+    "ACE_key_west",                                                 // Vehicle key - West
     "ACE_M26_Clacker",                                              // M152 Firing Device
     "ACE_MapTools",                                                 // Map Tools
     "ACE_microDAGR",                                                // MicroDAGR GPS
@@ -924,6 +935,7 @@ GRLIB_arsenal_items = [
     "ACE_VMM3",                                                     // VMM3
     "ACE_wirecutter",                                               // Wirecutter
     "ACE_Yardage450",                                               // Yardage 450
+    "ACE_SpareBarrel",                                              // Spare Barrel
 
     // ACRE Items
     "ACRE_PRC117F",                                                 // AN/PRC-117F
@@ -938,13 +950,13 @@ GRLIB_arsenal_items = [
     "ACRE_VHF30108SPIKE",                                           // VHF30108 GS
 
     // TFAR Items
-    "tf_anprc148jem",                                               // AN/PRC-148 JEM
-    "tf_anprc152",                                                  // AN/PRC-152
-    "tf_anprc154_1",                                                // AN/PRC-154
-    "tf_fadak",                                                     // FADAK
-    "tf_microdagr",                                                 // MicroDAGR Radio Programmer
-    "tf_pnr1000a_1",                                                // PNR-1000A
-    "tf_rf7800str"                                                  // PF-7800S-TR
+    "TFAR_anprc148jem",                                               // AN/PRC-148 JEM
+    "TFAR_anprc152",                                                  // AN/PRC-152
+    "TFAR_anprc154_1",                                                // AN/PRC-154
+    "TFAR_fadak",                                                     // FADAK
+    "TFAR_microdagr",                                                 // MicroDAGR Radio Programmer
+    "TFAR_pnr1000a_1",                                                // PNR-1000A
+    "TFAR_rf7800str"                                                  // PF-7800S-TR
 ];
 
 GRLIB_arsenal_backpacks = [
@@ -976,21 +988,30 @@ GRLIB_arsenal_backpacks = [
     "ACE_TacticalLadder_Pack",                                      // Telescopic Ladder
 
     // TFAR Backpacks
-    "tf_anarc164",                                                  // AN/ARC-164
-    "tf_anarc210",                                                  // AN/ARC-210
-    "tf_anprc155_coyote",                                           // AN/PRC 155 Coyote
-    "tf_anprc155",                                                  // AN/PRC 155
-    "tf_bussole",                                                   // Assault Pack Bussole
-    "tf_mr3000_multicam",                                           // MR3000 Multicam
-    "tf_mr3000_rhs",                                                // MR3000 RHS
-    "tf_mr3000",                                                    // MR3000
-    "tf_mr6000l",                                                   // MR6000L
-    "tf_rt1523g_big_rhs",                                           // RT-1523G (ASIP) Big RHS
-    "tf_rt1523g_big",                                               // RT-1523G (ASIP) Big
-    "tf_rt1523g_black",                                             // RT-1523G (ASIP) Black
-    "tf_rt1523g_fabric",                                            // RT-1523G (ASIP) Fabric
-    "tf_rt1523g_green",                                             // RT-1523G (ASIP) Green
-    "tf_rt1523g_rhs",                                               // RT-1523G (ASIP) RHS
-    "tf_rt1523g_sage",                                              // RT-1523G (ASIP) Sage
-    "tf_rt1523g"                                                    // RT-1523G (ASIP)
+    "TFAR_anarc164",                                                  // AN/ARC-164
+    "TFAR_anarc210",                                                  // AN/ARC-210
+    "TFAR_anprc155_coyote",                                           // AN/PRC 155 Coyote
+    "TFAR_anprc155",                                                  // AN/PRC 155
+    "TFAR_bussole",                                                   // Assault Pack Bussole
+    "TFAR_mr3000_multicam",                                           // MR3000 Multicam
+    "TFAR_mr3000_rhs",                                                // MR3000 RHS
+    "TFAR_mr3000",                                                    // MR3000
+    "TFAR_mr6000l",                                                   // MR6000L
+    "TFAR_rt1523g_big_rhs",                                           // RT-1523G (ASIP) Big RHS
+    "TFAR_rt1523g_big",                                               // RT-1523G (ASIP) Big
+    "TFAR_rt1523g_black",                                             // RT-1523G (ASIP) Black
+    "TFAR_rt1523g_fabric",                                            // RT-1523G (ASIP) Fabric
+    "TFAR_rt1523g_green",                                             // RT-1523G (ASIP) Green
+    "TFAR_rt1523g_rhs",                                               // RT-1523G (ASIP) RHS
+    "TFAR_rt1523g_sage",                                              // RT-1523G (ASIP) Sage
+    "TFAR_rt1523g"                                                    // RT-1523G (ASIP)
 ];
+
+ACE_arsenal_defaults = [
+    ["Infantry", [[],[],[],["rhs_uniform_g3_mc",[["ACE_CableTie",4],["ACE_EarPlugs",1],["ACE_Flashlight_XL50",1],["ACE_IR_Strobe_Item",3],["ACRE_PRC343",1]]],["rhsusf_spcs_ocp_rifleman_alt",[["rhs_mag_an_m8hc",2,1],["rhs_mag_m67",3,1]]],["rhsusf_assault_eagleaiii_ocp",[["ACE_fieldDressing",20],["ACE_bloodIV_250",1],["ACE_EntrenchingTool",1],["ACE_epinephrine",3],["ACE_morphine",15],["ACE_tourniquet",4],["ACE_adenosine",2]]],"rhsusf_opscore_mc_cover_pelt_cam","",["rhsusf_bino_lerca_1200_tan","","","",[],[],""],["ItemMap","ItemGPS","ItemRadioAcreFlagged","ItemCompass","ACE_Altimeter","ACE_NVG_Wide"]]]
+];
+
+_uavOperator = missionNamespace getVariable["uavoperator", objNull];
+if (player isEqualTo _uavOperator) then {
+    GRLIB_arsenal_items pushBack "B_UavTerminal";
+};

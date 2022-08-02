@@ -11,6 +11,7 @@ if (KP_liberation_arsenalUsePreset) then {
     if (isNil "GRLIB_arsenal_items") then {GRLIB_arsenal_items = []};
     if (isNil "GRLIB_arsenal_backpacks") then {GRLIB_arsenal_backpacks = []};
     if (isNil "blacklisted_from_arsenal") then {blacklisted_from_arsenal = []};
+    if (isNil "ACE_arsenal_defaults") then {ACE_arsenal_defaults = []};
 
     if ((count GRLIB_arsenal_weapons) == 0) then {
         if ((count blacklisted_from_arsenal) == 0) then {
@@ -97,6 +98,10 @@ if (KP_liberation_arsenalUsePreset) then {
 
     if (KP_liberation_ace && KP_liberation_arsenal_type) then {
         [player, KP_liberation_allowed_items, false] call ace_arsenal_fnc_addVirtualItems;
+
+        {
+            [_x select 0, _x select 1] call ace_arsenal_fnc_addDefaultLoadout;
+        } forEach ACE_arsenal_defaults;
     };
 
     // Lowercase all classnames
