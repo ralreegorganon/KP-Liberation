@@ -44,8 +44,8 @@ if (!_clearedtobuildfob) then {
         FOB_build_in_progress = false;
         publicVariable "FOB_build_in_progress";
     } else {
-        buildtype = 99;
-        dobuild = 1;
         deleteVehicle (_this select 0);
+        [FOB_typename, 0, 0, 0, 99, false] call KPLIB_fnc_handleBuild;
+        [(getPos player), false] remoteExec ["build_fob_remote_call",2];
     };
 };

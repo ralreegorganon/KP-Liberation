@@ -1,11 +1,20 @@
 class Build {
-	file = "scripts\client\build\fnc";
+    file = "scripts\client\build\fnc";
 
-	class getBoundingDistance       {};
+    // Functions
+    class buildAi                   {};
+    class buildItem                 {};
+    class buildSquad                {};
+    class getBoundingDistance       {};
+    class handleBuild               {};
     class handleBuildAction         {};
-	class handleBuildCancel			{};
-	class handleBuildDistance		{};
-	class handleBuildElevation		{};
-	class handleBuildPlacement		{};
-	class handleBuildRotation		{};
+    class handleBuildCancel         {};
+    class handleBuildDistance       {};
+    class handleBuildElevation      {};
+    class handleBuildPlacement      {};
+    class handleBuildRotation       {};
+
+    class build_postInit {
+        postInit = 1;
+    }
 };

@@ -2,7 +2,7 @@
     File: fn_handleBuildPlacement.sqf
     Author: ColinM https://github.com/ColinM9991/KP-Liberation
     Date: 2022-07-20
-    Last Update: 2022-07-20
+    Last Update: 2022-08-02
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -12,19 +12,20 @@
         void
 */
 params[
-	["_shouldRepeat", false, [false]]];
+    ["_shouldRepeat", false, [false]],
+    ["_buildType", -1, [-1]]
+];
 
-if (buildtype isEqualTo 6 && {
-	_shouldRepeat
-}) then {
-	repeatbuild = true;
-};
-
-if(!_shouldRepeat) then {
+if(_shouldRepeat && _buildType isEqualTo 6) then {
+    KPLIB_isBuilding = false;
+    KPLIB_hasCancelledBuild = false;
+} else {
     build_rotation = 0;
     build_elevation = 0;
     build_distance = 0;
-};
-
-build_confirmed = 2;
-hint localize "STR_CONFIRM_HINT";
+    build_vector = false;
+    
+    KPLIB_isBuilding = false;
+    KPLIB_hasCancelledBuild = false;
+    KPLIB_buildingInProgress = false;
+}
