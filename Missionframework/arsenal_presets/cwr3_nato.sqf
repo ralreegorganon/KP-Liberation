@@ -14,6 +14,7 @@
     - Cold War Rearmed III - United States Marine Corps Expansion
     - Cold War Rearmed III - British Armed Forces Expansion
     - ACE
+    - Immersion Cigs
 */
 
 GRLIB_arsenal_weapons = [
@@ -574,7 +575,12 @@ GRLIB_arsenal_items = [
     "ACE_surgicalKit",                                              // Surgical Kit
     "ACE_tourniquet",                                               // Tourniquet (CAT)
     "ACE_Tripod",                                                   // SSWT Kit
-    "ACE_wirecutter"                                                // Wirecutter
+    "ACE_wirecutter",                                               // Wirecutter
+
+    // Immersion Cigs
+    "murshun_cigs_matches",
+    "murshun_cigs_lighter",
+    "murshun_cigs_cigpack"
 ];
 
 GRLIB_arsenal_backpacks = [
