@@ -3825,6 +3825,256 @@
             <Korean>Killah Potatoes 깃발</Korean>
             <Czech>Killah Potatoes vlajka</Czech>
         </Key>
+        <Key ID="STR_Infantry_USA">
+            <Original>Rifleman (All units under this are US Army)</Original>
+            <French>Rifleman (All units under this are US Army)</French>
+            <German>Rifleman (All units under this are US Army)</German>
+            <Spanish>Rifleman (All units under this are US Army)</Spanish>
+            <Russian>Rifleman (All units under this are US Army)</Russian>
+            <Italian>Rifleman (All units under this are US Army)</Italian>
+            <Chinesesimp>Rifleman (All units under this are US Army)</Chinesesimp>
+            <Chinese>Rifleman (All units under this are US Army)</Chinese>
+            <Turkish>Rifleman (All units under this are US Army)</Turkish>
+            <Portuguese>Rifleman (All units under this are US Army)</Portuguese>
+            <Korean>Rifleman (All units under this are US Army)</Korean>
+            <Czech>Rifleman (All units under this are US Army)</Czech>
+        </Key>
+        <Key ID="STR_Infantry_USA82">
+            <Original>Rifleman (All units under this are US Army '82)</Original>
+            <French>Rifleman (All units under this are US Army '82)</French>
+            <German>Rifleman (All units under this are US Army '82)</German>
+            <Spanish>Rifleman (All units under this are US Army '82)</Spanish>
+            <Russian>Rifleman (All units under this are US Army '82)</Russian>
+            <Italian>Rifleman (All units under this are US Army '82)</Italian>
+            <Chinesesimp>Rifleman (All units under this are US Army '82)</Chinesesimp>
+            <Chinese>Rifleman (All units under this are US Army '82)</Chinese>
+            <Turkish>Rifleman (All units under this are US Army '82)</Turkish>
+            <Portuguese>Rifleman (All units under this are US Army '82)</Portuguese>
+            <Korean>Rifleman (All units under this are US Army '82)</Korean>
+            <Czech>Rifleman (All units under this are US Army '82)</Czech>
+        </Key>
+        <Key ID="STR_Infantry_USAAB">
+            <Original>Rifleman (All units under this are US Army Airborne)</Original>
+            <French>Rifleman (All units under this are US Army Airborne)</French>
+            <German>Rifleman (All units under this are US Army Airborne)</German>
+            <Spanish>Rifleman (All units under this are US Army Airborne)</Spanish>
+            <Russian>Rifleman (All units under this are US Army Airborne)</Russian>
+            <Italian>Rifleman (All units under this are US Army Airborne)</Italian>
+            <Chinesesimp>Rifleman (All units under this are US Army Airborne)</Chinesesimp>
+            <Chinese>Rifleman (All units under this are US Army Airborne)</Chinese>
+            <Turkish>Rifleman (All units under this are US Army Airborne)</Turkish>
+            <Portuguese>Rifleman (All units under this are US Army Airborne)</Portuguese>
+            <Korean>Rifleman (All units under this are US Army Airborne)</Korean>
+            <Czech>Rifleman (All units under this are US Army Airborne)</Czech>
+        </Key>
+        <Key ID="STR_Infantry_UK">
+            <Original>Rifleman (All units under this are UK Army)</Original>
+            <French>Rifleman (All units under this are UK Army)</French>
+            <German>Rifleman (All units under this are UK Army)</German>
+            <Spanish>Rifleman (All units under this are UK Army)</Spanish>
+            <Russian>Rifleman (All units under this are UK Army)</Russian>
+            <Italian>Rifleman (All units under this are UK Army)</Italian>
+            <Chinesesimp>Rifleman (All units under this are UK Army)</Chinesesimp>
+            <Chinese>Rifleman (All units under this are UK Army)</Chinese>
+            <Turkish>Rifleman (All units under this are UK Army)</Turkish>
+            <Portuguese>Rifleman (All units under this are UK Army)</Portuguese>
+            <Korean>Rifleman (All units under this are UK Army)</Korean>
+            <Czech>Rifleman (All units under this are UK Army)</Czech>
+        </Key>
+        <Key ID="STR_Infantry_USMC">
+            <Original>Rifleman (All units under this are USMC)</Original>
+            <French>Rifleman (All units under this are USMC)</French>
+            <German>Rifleman (All units under this are USMC)</German>
+            <Spanish>Rifleman (All units under this are USMC)</Spanish>
+            <Russian>Rifleman (All units under this are USMC)</Russian>
+            <Italian>Rifleman (All units under this are USMC)</Italian>
+            <Chinesesimp>Rifleman (All units under this are USMC)</Chinesesimp>
+            <Chinese>Rifleman (All units under this are USMC)</Chinese>
+            <Turkish>Rifleman (All units under this are USMC)</Turkish>
+            <Portuguese>Rifleman (All units under this are USMC)</Portuguese>
+            <Korean>Rifleman (All units under this are USMC)</Korean>
+            <Czech>Rifleman (All units under this are USMC)</Czech>
+        </Key>
+        <Key ID="STR_Infantry_SOV85">
+            <Original>Rifleman (All units under this are KMLK)</Original>
+            <French>Rifleman (All units under this are KMLK)</French>
+            <German>Rifleman (All units under this are KMLK)</German>
+            <Spanish>Rifleman (All units under this are KMLK)</Spanish>
+            <Russian>Rifleman (All units under this are KMLK)</Russian>
+            <Italian>Rifleman (All units under this are KMLK)</Italian>
+            <Chinesesimp>Rifleman (All units under this are KMLK)</Chinesesimp>
+            <Chinese>Rifleman (All units under this are KMLK)</Chinese>
+            <Turkish>Rifleman (All units under this are KMLK)</Turkish>
+            <Portuguese>Rifleman (All units under this are KMLK)</Portuguese>
+            <Korean>Rifleman (All units under this are KMLK)</Korean>
+            <Czech>Rifleman (All units under this are KMLK)</Czech>
+        </Key>
+        <Key ID="STR_Infantry_SOV82">
+            <Original>Rifleman (All units under this are M69)</Original>
+            <French>Rifleman (All units under this are M69)</French>
+            <German>Rifleman (All units under this are M69)</German>
+            <Spanish>Rifleman (All units under this are M69)</Spanish>
+            <Russian>Rifleman (All units under this are M69)</Russian>
+            <Italian>Rifleman (All units under this are M69)</Italian>
+            <Chinesesimp>Rifleman (All units under this are M69)</Chinesesimp>
+            <Chinese>Rifleman (All units under this are M69)</Chinese>
+            <Turkish>Rifleman (All units under this are M69)</Turkish>
+            <Portuguese>Rifleman (All units under this are M69)</Portuguese>
+            <Korean>Rifleman (All units under this are M69)</Korean>
+            <Czech>Rifleman (All units under this are M69)</Czech>
+        </Key>
+        <Key ID="STR_Infantry_SOVSPETSNAZ">
+            <Original>Rifleman (All units under this are Spetsnaz)</Original>
+            <French>Rifleman (All units under this are Spetsnaz)</French>
+            <German>Rifleman (All units under this are Spetsnaz)</German>
+            <Spanish>Rifleman (All units under this are Spetsnaz)</Spanish>
+            <Russian>Rifleman (All units under this are Spetsnaz)</Russian>
+            <Italian>Rifleman (All units under this are Spetsnaz)</Italian>
+            <Chinesesimp>Rifleman (All units under this are Spetsnaz)</Chinesesimp>
+            <Chinese>Rifleman (All units under this are Spetsnaz)</Chinese>
+            <Turkish>Rifleman (All units under this are Spetsnaz)</Turkish>
+            <Portuguese>Rifleman (All units under this are Spetsnaz)</Portuguese>
+            <Korean>Rifleman (All units under this are Spetsnaz)</Korean>
+            <Czech>Rifleman (All units under this are Spetsnaz)</Czech>
+        </Key>
+        <Key ID="STR_Armor_M1A1SA">
+            <Original>M1A1 Abrams (Prototype)</Original>
+            <French>M1A1 Abrams (Prototype)</French>
+            <German>M1A1 Abrams (Prototype)</German>
+            <Spanish>M1A1 Abrams (Prototype)</Spanish>
+            <Russian>M1A1 Abrams (Prototype)</Russian>
+            <Italian>M1A1 Abrams (Prototype)</Italian>
+            <Chinesesimp>M1A1 Abrams (Prototype)</Chinesesimp>
+            <Chinese>M1A1 Abrams (Prototype)</Chinese>
+            <Turkish>M1A1 Abrams (Prototype)</Turkish>
+            <Portuguese>M1A1 Abrams (Prototype)</Portuguese>
+            <Korean>M1A1 Abrams (Prototype)</Korean>
+            <Czech>M1A1 Abrams (Prototype)</Czech>
+        </Key>
+        <Key ID="STR_Air_UH1_BW">
+            <Original>UH-1D Huey (Bundeswehr, the 2 below are also Bundeswehr)</Original>
+            <French>UH-1D Huey (Bundeswehr, the 2 below are also Bundeswehr)</French>
+            <German>UH-1D Huey (Bundeswehr, the 2 below are also Bundeswehr)</German>
+            <Spanish>UH-1D Huey (Bundeswehr, the 2 below are also Bundeswehr)</Spanish>
+            <Russian>UH-1D Huey (Bundeswehr, the 2 below are also Bundeswehr)</Russian>
+            <Italian>UH-1D Huey (Bundeswehr, the 2 below are also Bundeswehr)</Italian>
+            <Chinesesimp>UH-1D Huey (Bundeswehr, the 2 below are also Bundeswehr)</Chinesesimp>
+            <Chinese>UH-1D Huey (Bundeswehr, the 2 below are also Bundeswehr)</Chinese>
+            <Turkish>UH-1D Huey (Bundeswehr, the 2 below are also Bundeswehr)</Turkish>
+            <Portuguese>UH-1D Huey (Bundeswehr, the 2 below are also Bundeswehr)</Portuguese>
+            <Korean>UH-1D Huey (Bundeswehr, the 2 below are also Bundeswehr)</Korean>
+            <Czech>UH-1D Huey (Bundeswehr, the 2 below are also Bundeswehr)</Czech>
+        </Key>
+        <Key ID="STR_Air_UH1_USMC">
+            <Original>UH-1H Huey (USMC, the 3 below are also USMC)</Original>
+            <French>UH-1H Huey (USMC, the 3 below are also USMC)</French>
+            <German>UH-1H Huey (USMC, the 3 below are also USMC)</German>
+            <Spanish>UH-1H Huey (USMC, the 3 below are also USMC)</Spanish>
+            <Russian>UH-1H Huey (USMC, the 3 below are also USMC)</Russian>
+            <Italian>UH-1H Huey (USMC, the 3 below are also USMC)</Italian>
+            <Chinesesimp>UH-1H Huey (USMC, the 3 below are also USMC)</Chinesesimp>
+            <Chinese>UH-1H Huey (USMC, the 3 below are also USMC)</Chinese>
+            <Turkish>UH-1H Huey (USMC, the 3 below are also USMC)</Turkish>
+            <Portuguese>UH-1H Huey (USMC, the 3 below are also USMC)</Portuguese>
+            <Korean>UH-1H Huey (USMC, the 3 below are also USMC)</Korean>
+            <Czech>UH-1H Huey (USMC, the 3 below are also USMC)</Czech>
+        </Key>
+        <Key ID="STR_Air_AH1_USMC">
+            <Original>AH-1 Cobra (USMC)</Original>
+            <French>AH-1 Cobra (USMC)</French>
+            <German>AH-1 Cobra (USMC)</German>
+            <Spanish>AH-1 Cobra (USMC)</Spanish>
+            <Russian>AH-1 Cobra (USMC)</Russian>
+            <Italian>AH-1 Cobra (USMC)</Italian>
+            <Chinesesimp>AH-1 Cobra (USMC)</Chinesesimp>
+            <Chinese>AH-1 Cobra (USMC)</Chinese>
+            <Turkish>AH-1 Cobra (USMC)</Turkish>
+            <Portuguese>AH-1 Cobra (USMC)</Portuguese>
+            <Korean>AH-1 Cobra (USMC)</Korean>
+            <Czech>AH-1 Cobra (USMC)</Czech>
+        </Key>
+        <Key ID="STR_Air_AH64">
+            <Original>AH-64 Apache (Prototype)</Original>
+            <French>AH-64 Apache (Prototype)</French>
+            <German>AH-64 Apache (Prototype)</German>
+            <Spanish>AH-64 Apache (Prototype)</Spanish>
+            <Russian>AH-64 Apache (Prototype)</Russian>
+            <Italian>AH-64 Apache (Prototype)</Italian>
+            <Chinesesimp>AH-64 Apache (Prototype)</Chinesesimp>
+            <Chinese>AH-64 Apache (Prototype)</Chinese>
+            <Turkish>AH-64 Apache (Prototype)</Turkish>
+            <Portuguese>AH-64 Apache (Prototype)</Portuguese>
+            <Korean>AH-64 Apache (Prototype)</Korean>
+            <Czech>AH-64 Apache (Prototype)</Czech>
+        </Key>
+        <Key ID="STR_Air_AH64_Hellfire">
+            <Original>AH-64 Apache Hellfire (Prototype)</Original>
+            <French>AH-64 Apache Hellfire (Prototype)</French>
+            <German>AH-64 Apache Hellfire (Prototype)</German>
+            <Spanish>AH-64 Apache Hellfire (Prototype)</Spanish>
+            <Russian>AH-64 Apache Hellfire (Prototype)</Russian>
+            <Italian>AH-64 Apache Hellfire (Prototype)</Italian>
+            <Chinesesimp>AH-64 Apache Hellfire (Prototype)</Chinesesimp>
+            <Chinese>AH-64 Apache Hellfire (Prototype)</Chinese>
+            <Turkish>AH-64 Apache Hellfire (Prototype)</Turkish>
+            <Portuguese>AH-64 Apache Hellfire (Prototype)</Portuguese>
+            <Korean>AH-64 Apache Hellfire (Prototype)</Korean>
+            <Czech>AH-64 Apache Hellfire (Prototype)</Czech>
+        </Key>
+        <Key ID="STR_Air_GR9">
+            <Original>Harrier GR.9 (Prototype)</Original>
+            <French>Harrier GR.9 (Prototype)</French>
+            <German>Harrier GR.9 (Prototype)</German>
+            <Spanish>Harrier GR.9 (Prototype)</Spanish>
+            <Russian>Harrier GR.9 (Prototype)</Russian>
+            <Italian>Harrier GR.9 (Prototype)</Italian>
+            <Chinesesimp>Harrier GR.9 (Prototype)</Chinesesimp>
+            <Chinese>Harrier GR.9 (Prototype)</Chinese>
+            <Turkish>Harrier GR.9 (Prototype)</Turkish>
+            <Portuguese>Harrier GR.9 (Prototype)</Portuguese>
+            <Korean>Harrier GR.9 (Prototype)</Korean>
+            <Czech>Harrier GR.9 (Prototype)</Czech>
+        </Key>
+                <Key ID="STR_BuildingSupply">
+            <Original>Building Supplies (30 credits)</Original>
+            <French>Building Supplies (30 credits)</French>
+            <German>Building Supplies (30 credits)</German>
+            <Spanish>Building Supplies (30 credits)</Spanish>
+            <Russian>Building Supplies (30 credits)</Russian>
+            <Italian>Building Supplies (30 credits)</Italian>
+            <Chinesesimp>Building Supplies (30 credits)</Chinesesimp>
+            <Chinese>Building Supplies (30 credits)</Chinese>
+            <Turkish>Building Supplies (30 credits)</Turkish>
+            <Portuguese>Building Supplies (30 credits)</Portuguese>
+            <Korean>Building Supplies (30 credits)</Korean>
+            <Czech>Building Supplies (30 credits)</Czech>
+        </Key>
+        <Key ID="STR_PHOTO1_MAGAZINE">
+            <Original>Playboy May 1985 Issue</Original>
+            <German>Playboy May 1985 Issue</German>
+            <Spanish>Playboy May 1985 Issue</Spanish>
+            <Russian>Playboy May 1985 Issue</Russian>
+            <Italian>Playboy May 1985 Issue</Italian>
+            <Chinesesimp>Playboy May 1985 Issue</Chinesesimp>
+            <Chinese>Playboy May 1985 Issue</Chinese>
+            <Turkish>Playboy May 1985 Issue</Turkish>
+            <Portuguese>Playboy May 1985 Issue</Portuguese>
+            <Korean>Playboy May 1985 Issue</Korean>
+            <Czech>Playboy May 1985 Issue</Czech>
+        </Key>
+        <Key ID="STR_PHOTO6_PINUP">
+            <Original>USSR Pin-Up</Original>
+            <German>USSR Pin-Up</German>
+            <Spanish>USSR Pin-Up</Spanish>
+            <Russian>USSR Pin-Up</Russian>
+            <Italian>USSR Pin-Up</Italian>
+            <Chinesesimp>USSR Pin-Up</Chinesesimp>
+            <Chinese>USSR Pin-Up</Chinese>
+            <Turkish>USSR Pin-Up</Turkish>
+            <Portuguese>USSR Pin-Up</Portuguese>
+            <Korean>USSR Pin-Up</Korean>
+            <Czech>USSR Pin-Up</Czech>
+        </Key>
         <Key ID="STR_SMALL_STORAGE">
             <Original>Small storage area</Original>
             <German>Kleiner Lagerbereich</German>

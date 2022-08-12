@@ -262,5 +262,20 @@
             "KP_liberation_arsenal": 0
         },
         "workshopId": ""
+    },
+    {
+        "sourceFolder": "kp_liberation.cwr3_malden_islands",
+        "missionName": "kp_liberation",
+        "map": "cwr3_malden_islands",
+        "mapDisplay": "Malden Islands",
+        "configFile": "kp_liberation_config.sqf",
+        "variables": {
+            "KP_liberation_preset_blufor": 31,
+            "KP_liberation_preset_opfor": 22,
+            "KP_liberation_preset_resistance": 9,
+            "KP_liberation_preset_civilians": 8,
+            "KP_liberation_arsenal": 17
+        },
+        "workshopId": ""
     }
 ]
