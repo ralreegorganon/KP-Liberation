@@ -276,5 +276,19 @@
             "KPLIB_arsenal": 0
         },
         "workshopId": ""
+    },
+    {
+        "sourceFolder": "kp_liberation.Sehreno",
+        "missionName": "kp_liberation",
+        "map": "Sehreno",
+        "configFile": "KPLIB_config.sqf",
+        "variables": {
+            "KPLIB_presetPlayer": 31,
+            "KPLIB_presetEnemy": 21,
+            "KPLIB_presetResistance": 9,
+            "KPLIB_presetCivilians": 8,
+            "KPLIB_presetArsenal": 17
+        },
+        "workshopId": ""
     }
 ]
