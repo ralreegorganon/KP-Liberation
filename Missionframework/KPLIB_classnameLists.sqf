@@ -826,3 +826,89 @@ KPLIB_collisionIgnoreObjects = [
     "Sign_Arrow_Yellow_F",
     "Sign_Sphere100cm_F"
 ];
+
+KPLIB_param_simplex_transport_classes = [
+    "I_Quadbike_01_F",                                        // Quad Bike
+    "PRACS_M1097_Scout",                                      // Humvee Scout
+    "PRACS_M998_Command",                                     // Humvee Command
+    "PRACS_M1025",                                           // Humvee
+    "PRACS_M1025_M2",                                       // Humvee (HMG)
+    "PRACS_M1025_Mk19",                                     // Humvee (GMG)
+    "PRACS_M1151_M240",                                     // Humvee AMV (LMG)
+    "PRACS_M1151_M2",                                       // Humvee AMV (HMG)
+    "PRACS_M1151_Mk19",                                     // Humvee AMV (GMG)
+    "PRACS_M1165_M134_QSB",                                // Humvee Griswold (Minigun)
+    "PRACS_M1165_M2",                                       // Humvee Griswold (HMG)
+    "PRACS_M1165_Mk19",                                     // Humvee Griswold (GMG)
+    "PRACS_M966_TOW",                                      // Humvee TOW
+    "PRACS_M998_cargo_open",                                 // Humvee Cargo (Open)
+    "PRACS_M998_cargo_topped",                               // Humvee Cargo (Top)
+    "PRACS_M250",                                            // M250 Transport
+    "PRACS_M250_open",                                       // HEMTT Transport (Open)
+    "PRACS_M250_flat_bed",                                   // HEMTT Transport (Open)
+    "PRACS_Zodiac",                                          // Zodiac
+    "PRACS_Mk5_SOCR",                                     // Mk.V Boat
+    "I_SDV_01_F",                                             // SDV
+    "PRACS_M113_M240",                                     // M113A3 (M240)
+    "PRACS_M113_M2",                                       // M113A3 (M2)
+    "PRACS_M113_mk19",                                     // M113A3 (Mk19)
+    "PRACS_M113_MED",                                       // M113A3 (Medical)
+    "PRACS_M577",                                           // M577 (HQ)
+    "PRACS_M1117",                                         // M1117 Guardian
+    "PRACS_BMR_HQ",                                        // BMR-600 (HQ)
+    "PRACS_BMR_AMB",                                       // BMR-600 (Medical)
+    "PRACS_BMR_M2",                                        // BMR-600 (M2)
+    "PRACS_BMR_ATGM",                                     // BMR-600 (ATGM)
+    "PRACS_BMR_ATGM_TOW",                                 // BMR-600 (TOW)
+    "PRACS_BMR_A3_M2",                                     // BMR-600A3 (M2)
+    "PRACS_BMR_A3_GA1",                                    // BMR-600A3 (GA1 20mm)
+    "PRACS_BMR_A3_M3_SFOD",                                // BMR-600A3 (M3 SFOD)
+    "PRACS_BMR_A3_Mk19",                                   // BMR-600A3 (Mk19)
+    "PRACS_Pizarro",                                      // ASCOD Pizarro
+    "PRACS_VEC_M242",                                     // VEC-M1
+    "PRACS_VEC_MGS",                                      // VEC-MGS
+    "PRACS_FV101",                                        // FV101 Scorpion
+    "PRACS_FV107",                                        // FV107 Scimitar
+    "PRACS_M163_VADS",                                    // M163 VADS
+    "PRACS_M163_PIVADS",                                  // M163 PIVADS
+    "PRACS_M163_MACHBET",                                 // M163 Machbet
+    "PRACS_m48_chapparal",                                // M48 Chapparal
+    "PRACS_M60A3",                                        // M60A3 Patton
+    "PRACS_M60S",                                         // M60S Pantera
+    "PRACS_M1A1_AIM",                                     // M1A1 Sahrani Lion
+    "PRACS_M109A6",                                      // M109A6-S Paladin
+    "PRACS_M430",                                        // M430L SMLRS
+    "PRACS_M270",                                         // M270 MLRS,
+    "PRACS_M727_IHAWK",                                  // M727 I-HAWK
+    "PRACS_M727_SEM_IHAWK",                              // M727 SEM I-HAWK
+    "PRACS_M548_MPG64",                                   // M-548 w/ MPQ-64SR Radar
+    "PRACS_UH1H",                                          // UH-1H
+    "PRACS_UH1H_CAS",                                     // UH-1Y (CAS)
+    "PRACS_Sa330_Puma",                                    // SA-330-S Puma
+    "PRACS_Sa330_Puma_SOCAT",                             // SA-330-S Puma (SOCAT)
+    "PRACS_Sa330_Puma_MED",                                 // SA-330-S Puma (Medevac)
+    "PRACS_CH53",                                           // CH-53 Sea Stallion
+    "PRACS_C130",                                           // C-130JS  Hercules
+    "PRACS_P3C",                                          // P-3C Orion
+    "PRACS_E2C"                                             // E-2C Hawkeye
+];
+
+KPLIB_param_simplex_cashelicopter_classes = [
+    "PRACS_RAH6",                                         // RAH-6S Angry Bird
+    "PRACS_UH1H_CAS",                                     // UH-1Y (CAS)
+    "PRACS_AH1S",                                       // AH-1SY Sahrani Cobra (Multi-Role)
+    "PRACS_Sa330_Puma_SOCAT"                            // SA-330-S Puma (SOCAT)
+];
+
+KPLIB_param_simplex_artillery_classes = [
+    "PRACS_M109A6",                                     // M109A6-S Paladin
+    "PRACS_M430",                                        // M430L SMLRS
+    "PRACS_M270",                                         // M270 MLRS,
+    "PRACS_Infantry_M252",                                   // M252 81mm Mortar
+    "PRACS_M101",                                           // M101-A2S
+    "PRACS_M102",                                           // M102-A4S
+    "PRACS_M114",                                           // M114-D5S
+    "PRACS_M198",                                           // M198A2
+    "PRACS_M1",                                             // M1 Long Tom
+    "PRACS_M115"                                           // M115
+];

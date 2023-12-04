@@ -83,7 +83,7 @@ KPLIB_objectInits = [
         [KPLIB_b_smallStorage, KPLIB_b_largeStorage],
         {_this setVariable ["KPLIB_storage_type", 0, true];}
     ],
-    
+
     // disable inventory action and ACE rename of resource crates
     [
         KPLIB_crates,
@@ -203,5 +203,39 @@ KPLIB_objectInits = [
             _this allowFleeing 0;
         },
         true
+    ],
+
+    [
+        KPLIB_param_simplex_transport_classes,
+        {
+            [_this] spawn {
+                params ["_transport"];
+                waitUntil {sleep 0.1; time > 0};
+                [_transport] remoteExecCall ["KPLIB_fnc_addConvertToSimplexTransportAction", 0, _transport];
+            };
+        }
+    ],
+
+    [
+        KPLIB_param_simplex_cashelicopter_classes,
+        {
+            [_this] spawn {
+                params ["_cashelo"];
+                waitUntil {sleep 0.1; time > 0};
+                [_cashelo] remoteExecCall ["KPLIB_fnc_addConvertToSimplexCASHelicopterAction", 0, _cashelo];
+            };
+        }
+    ],
+
+    [
+        KPLIB_param_simplex_artillery_classes,
+        {
+            [_this] spawn {
+                params ["_arty"];
+                waitUntil {sleep 0.1; time > 0};
+                [_arty] remoteExecCall ["KPLIB_fnc_addConvertToSimplexArtilleryAction", 0, _arty];
+            };
+        }
     ]
+
 ];
