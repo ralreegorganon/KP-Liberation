@@ -233,9 +233,31 @@ while { dialog && alive player } do {
         };
 
         if (KPLIB_squadaction == 2) then {
-            deleteVehicle _selectedmember;
-            _resupplied = true;
-            hint localize 'STR_REMOVE_OK';
+            private _type = typeOf _selectedmember;
+            private _objectinfo = (KPLIB_b_infantry select {_type == (_x select 0)}) select 0;
+            private _price_s = (_objectinfo select 1);
+            private _price_a = (_objectinfo select 2);
+            private _price_f = (_objectinfo select 3);
+            private _storage_areas = (([] call KPLIB_fnc_getNearestFob) nearobjects (KPLIB_range_fob * 1.2)) select {(_x getVariable ["KPLIB_storage_type",-1]) == 0};
+            private _crateSum = (ceil (_price_s / 100)) + (ceil (_price_a / 100)) + (ceil (_price_f / 100));
+            private _spaceSum = 0;
+
+            {
+                if (typeOf _x == KPLIB_b_largeStorage) then {
+                    _spaceSum = _spaceSum + (count KPLIB_large_storage_positions) - (count (attachedObjects _x));
+                };
+                if (typeOf _x == KPLIB_b_smallStorage) then {
+                    _spaceSum = _spaceSum + (count KPLIB_small_storage_positions) - (count (attachedObjects _x));
+                };
+            } forEach _storage_areas;
+
+            if (_spaceSum < _crateSum) then {
+                hint localize "STR_CANCEL_ERROR";
+            } else {
+                [_selectedmember, _price_s, _price_a, _price_f, _storage_areas] remoteExec ["recycle_remote_call",2];
+                _resupplied = true;
+                hint localize 'STR_REMOVE_OK';
+            };
         };
 
         if (KPLIB_squadaction == 3) then {
