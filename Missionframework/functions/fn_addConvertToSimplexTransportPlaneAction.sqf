@@ -20,11 +20,11 @@ params [
 ];
 
 if (isNull _obj) exitWith {["Null object given"] call BIS_fnc_error; false};
-if (!canSuspend) exitWith {_this spawn KPLIB_fnc_addConvertToSimplexTransportAction};
+if (!canSuspend) exitWith {_this spawn KPLIB_fnc_addConvertToSimplexTransportPlaneAction};
 
 _condition = {
     params ["_target", "_player", "_args"];
-    private _isNotSimplexed = isNull (_target getVariable ["SSS_parentEntity",objNull]);
+    private _isNotSimplexed = isNull (_target getVariable ["sss_entity",objNull]);
     private _noPlayers = {isPlayer _x} count crew _target == 0;
     private _hasDriver = alive driver _target;
     _isNotSimplexed && _noPlayers && _hasDriver
@@ -39,7 +39,7 @@ _statement = {
     } forEach [crew _target];
 
     // [_target] call KPLIB_fnc_forceBluforCrew;
-    [_target, getText (configFile >> "CfgVehicles" >> typeOf _target >> "displayName"), -1] call sss_support_fnc_addTransport;
+    [_target, getText (configFile >> "CfgVehicles" >> typeOf _target >> "displayName"), -1] call sss_transport_fnc_addPlane;
 };
 
 _action = ["ConvertToSimplexTransport","Convert To Simplex Transport","",_statement,_condition, {}] call ace_interact_menu_fnc_createAction;

@@ -7,8 +7,10 @@ class KPLIB {
         class addActionsPlayer          {};
         class addArtyToSupport          {};
         class addConvertToSimplexArtilleryAction         {};
-        class addConvertToSimplexCASHelicopterAction         {};
-        class addConvertToSimplexTransportAction         {};
+        class addConvertToSimplexTransportHelicopterAction         {};
+        class addConvertToSimplexTransportPlaneAction         {};
+        class addConvertToSimplexTransportBoatAction         {};
+        class addConvertToSimplexTransportLandAction         {};
         class addObjectInit             {};
         class addRopeAttachEh           {};
         class allowCrewInImmobile       {};

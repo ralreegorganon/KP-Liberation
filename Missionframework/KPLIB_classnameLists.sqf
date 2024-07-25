@@ -827,7 +827,28 @@ KPLIB_collisionIgnoreObjects = [
     "Sign_Sphere100cm_F"
 ];
 
-KPLIB_param_simplex_transport_classes = [
+KPLIB_param_simplex_transport_boat_classes = [
+    "PRACS_Zodiac",                                          // Zodiac
+    "PRACS_Mk5_SOCR",                                     // Mk.V Boat
+    "I_SDV_01_F"                                             // SDV
+];
+
+KPLIB_param_simplex_transport_helicopter_classes = [
+    "PRACS_UH1H",                                          // UH-1H
+    "PRACS_UH1H_CAS",                                     // UH-1Y (CAS)
+    "PRACS_Sa330_Puma",                                    // SA-330-S Puma
+    "PRACS_Sa330_Puma_SOCAT",                             // SA-330-S Puma (SOCAT)
+    "PRACS_Sa330_Puma_MED",                                 // SA-330-S Puma (Medevac)
+    "PRACS_CH53"                                           // CH-53 Sea Stallion
+];
+
+KPLIB_param_simplex_transport_plane_classes = [
+    "PRACS_C130",                                           // C-130JS  Hercules
+    "PRACS_P3C",                                          // P-3C Orion
+    "PRACS_E2C"                                             // E-2C Hawkeye
+];
+
+KPLIB_param_simplex_transport_land_classes = [
     "I_Quadbike_01_F",                                        // Quad Bike
     "PRACS_M1097_Scout",                                      // Humvee Scout
     "PRACS_M998_Command",                                     // Humvee Command
@@ -846,9 +867,6 @@ KPLIB_param_simplex_transport_classes = [
     "PRACS_M250",                                            // M250 Transport
     "PRACS_M250_open",                                       // HEMTT Transport (Open)
     "PRACS_M250_flat_bed",                                   // HEMTT Transport (Open)
-    "PRACS_Zodiac",                                          // Zodiac
-    "PRACS_Mk5_SOCR",                                     // Mk.V Boat
-    "I_SDV_01_F",                                             // SDV
     "PRACS_M113_M240",                                     // M113A3 (M240)
     "PRACS_M113_M2",                                       // M113A3 (M2)
     "PRACS_M113_mk19",                                     // M113A3 (Mk19)
@@ -881,23 +899,7 @@ KPLIB_param_simplex_transport_classes = [
     "PRACS_M270",                                         // M270 MLRS,
     "PRACS_M727_IHAWK",                                  // M727 I-HAWK
     "PRACS_M727_SEM_IHAWK",                              // M727 SEM I-HAWK
-    "PRACS_M548_MPG64",                                   // M-548 w/ MPQ-64SR Radar
-    "PRACS_UH1H",                                          // UH-1H
-    "PRACS_UH1H_CAS",                                     // UH-1Y (CAS)
-    "PRACS_Sa330_Puma",                                    // SA-330-S Puma
-    "PRACS_Sa330_Puma_SOCAT",                             // SA-330-S Puma (SOCAT)
-    "PRACS_Sa330_Puma_MED",                                 // SA-330-S Puma (Medevac)
-    "PRACS_CH53",                                           // CH-53 Sea Stallion
-    "PRACS_C130",                                           // C-130JS  Hercules
-    "PRACS_P3C",                                          // P-3C Orion
-    "PRACS_E2C"                                             // E-2C Hawkeye
-];
-
-KPLIB_param_simplex_cashelicopter_classes = [
-    "PRACS_RAH6",                                         // RAH-6S Angry Bird
-    "PRACS_UH1H_CAS",                                     // UH-1Y (CAS)
-    "PRACS_AH1S",                                       // AH-1SY Sahrani Cobra (Multi-Role)
-    "PRACS_Sa330_Puma_SOCAT"                            // SA-330-S Puma (SOCAT)
+    "PRACS_M548_MPG64"                                   // M-548 w/ MPQ-64SR Radar
 ];
 
 KPLIB_param_simplex_artillery_classes = [

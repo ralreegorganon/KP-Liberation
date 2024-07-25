@@ -206,23 +206,45 @@ KPLIB_objectInits = [
     ],
 
     [
-        KPLIB_param_simplex_transport_classes,
+        KPLIB_param_simplex_transport_boat_classes,
         {
             [_this] spawn {
                 params ["_transport"];
                 waitUntil {sleep 0.1; time > 0};
-                [_transport] remoteExecCall ["KPLIB_fnc_addConvertToSimplexTransportAction", 0, _transport];
+                [_transport] remoteExecCall ["KPLIB_fnc_addConvertToSimplexTransportBoatAction", 0, _transport];
             };
         }
     ],
 
     [
-        KPLIB_param_simplex_cashelicopter_classes,
+        KPLIB_param_simplex_transport_plane_classes,
         {
             [_this] spawn {
-                params ["_cashelo"];
+                params ["_transport"];
                 waitUntil {sleep 0.1; time > 0};
-                [_cashelo] remoteExecCall ["KPLIB_fnc_addConvertToSimplexCASHelicopterAction", 0, _cashelo];
+                [_transport] remoteExecCall ["KPLIB_fnc_addConvertToSimplexTransportPlaneAction", 0, _transport];
+            };
+        }
+    ],
+
+    [
+        KPLIB_param_simplex_transport_helicopter_classes,
+        {
+            [_this] spawn {
+                params ["_transport"];
+                waitUntil {sleep 0.1; time > 0};
+                [_transport] remoteExecCall ["KPLIB_fnc_addConvertToSimplexTransportHelicopterAction", 0, _transport];
+            };
+        }
+    ],
+
+    [
+        KPLIB_param_simplex_transport_land_classes,
+        {
+            [_this] spawn {
+                params ["_transport"];
+                waitUntil {sleep 0.1; time > 0};
+                [_transport] remoteExecCall ["KPLIB_fnc_addConvertToSimplexTransportLandAction", 0, _transport];
             };
         }
     ],
